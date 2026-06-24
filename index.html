@@ -199,7 +199,7 @@ footer{background:#100e0a;border-top:1px solid var(--line);padding:84px 46px 36p
   background:var(--ink2);border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.65);display:none;flex-direction:column;overflow:hidden}
 .cbmod.open{display:flex;animation:up .45s var(--ease)}
 @keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.cbhead{background:var(--ink3);padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.cbhead{position:relative;background:var(--ink3);padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
 .cbhi{display:flex;align-items:center;gap:12px}
 .cbav{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--brass),#8a6a22);display:flex;align-items:center;justify-content:center;
   font-family:'Anton',sans-serif;color:var(--ink);font-size:20px}
@@ -207,7 +207,8 @@ footer{background:#100e0a;border-top:1px solid var(--line);padding:84px 46px 36p
 .cbhead .stt{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px;margin-top:2px}
 .don{width:7px;height:7px;background:#3ddc84;border-radius:50%;animation:bl 1.6s infinite}
 @keyframes bl{0%,100%{opacity:1}50%{opacity:.35}}
-.cbx{background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer}
+.cbx{position:absolute;top:14px;right:16px;background:transparent;border:none;color:var(--brass);font-size:18px;cursor:pointer;line-height:1;transition:opacity .25s}
+.cbx:hover{opacity:.7}
 .cbx.hide{display:none}
 .cbbody{flex:1;overflow-y:auto;padding:20px;background:var(--ink)}
 .cbbody::-webkit-scrollbar{width:5px}.cbbody::-webkit-scrollbar-thumb{background:var(--brass);border-radius:3px}
@@ -230,7 +231,7 @@ footer{background:#100e0a;border-top:1px solid var(--line);padding:84px 46px 36p
 .qk button:hover .p{color:var(--ink)}
 .qk .ok{background:var(--brass);color:var(--ink);border-color:var(--brass);text-align:center;font-weight:600}
 /* calendar */
-.cal{background:var(--ink3);border:1px solid var(--line);border-radius:14px;padding:14px;margin:6px 0 12px}
+.cal{background:rgba(0,0,0,.3);border:1px solid rgba(199,154,59,.3);border-radius:12px;padding:14px;margin:6px 0 12px;max-width:280px}
 .cal-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .cal-h b{font-family:'Archivo',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--paper)}
 .cal-h button{background:var(--ink);border:1px solid var(--line);color:var(--brass);width:28px;height:28px;border-radius:8px;cursor:pointer;font-size:14px}
@@ -238,7 +239,8 @@ footer{background:#100e0a;border-top:1px solid var(--line);padding:84px 46px 36p
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
 .cal-grid .wd{font-size:9px;text-align:center;color:var(--muted);letter-spacing:1px;padding-bottom:4px}
 .cal-grid .dy{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:8px;cursor:pointer;color:var(--paper);transition:all .2s}
-.cal-grid .dy:hover{background:var(--brass);color:var(--ink)}
+.cal-grid .dy:hover{background:rgba(199,154,59,.2)}
+.cal-grid .dy.sel{background:var(--brass);color:var(--ink)}
 .cal-grid .dy.off{color:transparent;pointer-events:none}
 .cal-grid .dy.dis{color:#4a4238;pointer-events:none;text-decoration:line-through}
 .hours{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 12px}
@@ -518,8 +520,8 @@ var cbStep=0,cbOpen=false;
 var booking={servicio:'',precio:0,barbero:'',fecha:'',hora:'',nombre:'',telefono:''};
 
 function openChat(){cbmod.classList.add('open');cbfab.classList.add('hide');cbtip.classList.add('hide');if(!cbOpen){cbOpen=true;setTimeout(welcome,420);}}
-function closeChat(){if(cbStep>=1&&cbStep<99)return;cbmod.classList.remove('open');cbfab.classList.remove('hide');}
-function lock(){cbx.classList.add('hide');cbfab.classList.add('hide');cbtip.classList.add('hide');}
+function closeChat(){cbmod.classList.remove('open');cbfab.classList.remove('hide');}
+function lock(){cbfab.classList.add('hide');cbtip.classList.add('hide');}
 function unlock(){cbx.classList.remove('hide');}
 function bot(html,cb){var t=document.createElement('div');t.className='typ';t.innerHTML='<span></span><span></span><span></span>';cbbody.appendChild(t);cbbody.scrollTop=cbbody.scrollHeight;setTimeout(function(){t.remove();var m=document.createElement('div');m.className='m bot';m.innerHTML='<div class="bub">'+html+'</div>';cbbody.appendChild(m);cbbody.scrollTop=cbbody.scrollHeight;if(cb)cb();},820);}
 function usr(t){var m=document.createElement('div');m.className='m usr';m.innerHTML='<div class="bub">'+t+'</div>';cbbody.appendChild(m);cbbody.scrollTop=cbbody.scrollHeight;}
@@ -558,7 +560,7 @@ function renderCal(year,month){
     var cell=document.createElement('div');cell.className='dy';cell.textContent=d;
     var cd=new Date(year,month,d);
     if(cd<today||cd.getDay()===0){cell.className='dy dis';} // pasado o domingo cerrado
-    else{(function(cd,d){cell.onclick=function(){var dd=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'][cd.getDay()];booking.fecha=dd+' '+d+' '+MESES[month].toLowerCase();usr(booking.fecha);wrap.remove();askHora();};})(cd,d);}
+    else{(function(cd,d,cell){cell.onclick=function(){var dd=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'][cd.getDay()];booking.fecha=dd+' '+d+' '+MESES[month].toLowerCase();cell.classList.add('sel');usr(booking.fecha);setTimeout(function(){wrap.remove();askHora();},180);};})(cd,d,cell);}
     grid.appendChild(cell);
   }
   wrap.appendChild(grid);cbbody.appendChild(wrap);cbbody.scrollTop=cbbody.scrollHeight;
@@ -567,7 +569,7 @@ function renderCal(year,month){
 }
 function askHora(){bot('¿A qué hora te va bien?',function(){
   var wrap=document.createElement('div');wrap.className='hours';
-  ['10:00','11:00','12:00','13:00','14:00','16:00','17:00','18:00','19:00'].forEach(function(h){var b=document.createElement('button');b.textContent=h;b.onclick=function(){booking.hora=h;usr(h);wrap.remove();askDatos();};wrap.appendChild(b);});
+  ['10:00','11:00','12:00','13:00','15:00','16:00','17:00','18:00','19:00'].forEach(function(h){var b=document.createElement('button');b.textContent=h;b.onclick=function(){booking.hora=h;usr(h);wrap.remove();askDatos();};wrap.appendChild(b);});
   cbbody.appendChild(wrap);cbbody.scrollTop=cbbody.scrollHeight;
 });}
 function askDatos(){cbStep=4;bot('¿Nombre y teléfono, crack?',function(){inputField('Tu nombre',function(v){if(v.length<2)return false;booking.nombre=v;usr(v);askTel();return true;});});}
