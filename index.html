@@ -2,689 +2,732 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rodrigo Peluqueros · Peluquería Hombre Majadahonda · Corte Fade Barba Bebés</title>
-<meta name="description" content="Peluquería para hombre, infantil y bebés en Majadahonda. Corte, barba, fade y color. Incluye lavado y productos. Llama: 912 543 968">
-<meta property="og:title" content="Rodrigo Peluqueros · Majadahonda">
-<meta property="og:description" content="Peluquería para hombre, niños y bebés en Majadahonda. Corte, barba y fade desde 10€.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=630&fit=crop&fm=jpg&q=80">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Barbers Club | Barbería Premium · Reserva Online</title>
+<meta name="description" content="Barbers Club — corte, barba y ritual premium en Madrid. Reserva online con Thiago o Kimbo. Sin esperas. Presupuesto en el momento.">
+<link rel="canonical" href="https://nexusforgeia.github.io/WHITEMOON-BARBERIAS/">
+<meta property="og:title" content="Barbers Club | Barbería Premium">
+<meta property="og:description" content="Reserva online con Thiago o Kimbo. Sin esperas.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpgphoto-1503951914875-452162b0f3f1?fm=jpg&q=80&w=1200q=80photo-1503951914875-452162b0f3f1?fm=jpg&q=80&w=1200w=1200&auto=format&fit=crop">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400;0,9..144,500&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HairSalon","name":"Rodrigo Peluqueros","telephone":"+34912543968","priceRange":"€",
-"address":{"@type":"PostalAddress","streetAddress":"Calle Iglesia, 3 Local 2","addressLocality":"Majadahonda","postalCode":"28220","addressCountry":"ES"},
-"geo":{"@type":"GeoCoordinates","latitude":40.472808,"longitude":-3.873572},
-"openingHoursSpecification":[
-  {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"14:00"},
-  {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"16:30","closes":"20:00"},
-  {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"10:00","closes":"14:00"}
-],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"247"}}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --ink:#16130f;--ink2:#1d1813;--ink3:#262019;
-  --paper:#f4ece0;--brass:#c79a3b;--brass2:#e3bd64;--red:#d23b2c;
-  --text:#f4ece0;--muted:#a99c87;--line:rgba(199,154,59,.20);
-  --ease:cubic-bezier(.32,.72,0,1);
+  --black:#000;
+  --black2:#0a0a0a;
+  --black3:#111;
+  --white:#fff;
+  --white2:#f0f0f0;
+  --muted:#777;
+  --muted2:#444;
+  --border:rgba(255,255,255,0.12);
+  --border2:rgba(255,255,255,0.07);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Archivo',sans-serif;font-weight:300;background:var(--ink);color:var(--text);line-height:1.6;overflow-x:hidden}
-h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.5px;line-height:.92;text-transform:uppercase}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.serif{font-family:'Fraunces',serif;font-style:italic;font-weight:500;text-transform:none;letter-spacing:0}
-::selection{background:var(--brass);color:var(--ink)}
-.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.cur{position:fixed;top:0;left:0;width:30px;height:30px;border:1.5px solid var(--brass);border-radius:50%;
-  transform:translate(-50%,-50%);pointer-events:none;z-index:9000;opacity:0;transition:opacity .3s,width .3s,height .3s;mix-blend-mode:difference}
-@media(hover:hover) and (pointer:fine){.cur{opacity:1}body{cursor:none}a,button{cursor:none}}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;line-height:1.6}
+
+/* PRELOADER */
+.preloader{position:fixed;inset:0;background:var(--black);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity .6s ease, visibility .6s ease}
+.preloader.hide{opacity:0;visibility:hidden}
+.preloader-logo{font-family:'Anton',sans-serif;font-size:3rem;letter-spacing:.08em;color:var(--white);animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
-  padding:22px 46px;transition:padding .4s var(--ease),background .4s var(--ease),border-color .4s;border-bottom:1px solid transparent}
-.nav.s{padding:13px 46px;background:rgba(22,19,15,.88);backdrop-filter:blur(16px);border-bottom-color:var(--line)}
-.brand{font-family:'Anton',sans-serif;font-size:22px;letter-spacing:1.5px;text-transform:uppercase}
-.brand .amp{color:var(--brass)}
-.nav-links{display:flex;align-items:center;gap:32px}
-.nav-links a.lk{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .3s;font-weight:500}
-.nav-links a.lk:hover{color:var(--paper)}
-.soc{display:flex;gap:14px;align-items:center}
-.soc a{color:var(--muted);transition:color .3s,transform .3s}.soc a:hover{color:var(--brass);transform:translateY(-2px)}
-.soc svg{width:18px;height:18px;display:block}
-.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:2px;
-  text-transform:uppercase;font-weight:600;border:none;cursor:pointer;border-radius:40px;padding:11px 12px 11px 22px;
-  background:var(--brass);color:var(--ink);transition:background .3s,transform .3s}
-.btn .ic{width:30px;height:30px;border-radius:50%;background:rgba(22,19,15,.18);display:flex;align-items:center;justify-content:center}
-.btn .ic svg{width:15px;height:15px}
-.btn:hover{background:var(--brass2)}.btn:active{transform:scale(.97)}
-.btn-out{background:transparent;color:var(--paper);border:1px solid var(--line);padding:13px 24px}
-.btn-out:hover{background:transparent;border-color:var(--brass);color:var(--brass)}
-.menu-tog{display:none;background:none;border:none;color:var(--brass);font-size:26px;cursor:pointer}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2)}
+.nav-logo{display:flex;align-items:baseline;gap:3px;text-decoration:none}
+.nav-logo .italic{font-family:Georgia,serif;font-style:italic;font-size:1.1rem;color:var(--white);letter-spacing:-.01em}
+.nav-logo .sans{font-family:'Anton',sans-serif;font-size:1.05rem;color:var(--white);letter-spacing:.06em}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--white);padding:10px 22px;border-radius:2px;text-decoration:none;transition:opacity .2s}
+.nav-cta:hover{opacity:.85}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--white);transition:all .3s}
 
 /* HERO */
-.hero{position:relative;min-height:100dvh;display:flex;align-items:flex-end;overflow:hidden;padding:0 46px 70px}
-.hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg video{width:100%;height:100%;object-fit:cover;filter:grayscale(.3) contrast(1.05)}
-.hero-bg.fallback{background:linear-gradient(125deg,#16130f,#241a10,#16130f,#2a1410);background-size:300% 300%;animation:grad 16s ease infinite}
-@keyframes grad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-.hero-bg::after{content:'';position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(22,19,15,.55) 0%,rgba(22,19,15,.35) 40%,rgba(22,19,15,.92) 100%),
-  linear-gradient(90deg,rgba(22,19,15,.8),transparent 55%)}
-.ghost{position:absolute;left:-1.5vw;top:8vh;font-family:'Anton',sans-serif;font-size:clamp(140px,28vw,480px);
-  line-height:.8;color:var(--paper);opacity:.05;pointer-events:none;user-select:none;z-index:1}
-.hero-in{position:relative;z-index:2;max-width:1320px;margin:0 auto;width:100%}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border:1px solid var(--line);border-radius:40px;
-  font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--brass);margin-bottom:26px;background:rgba(199,154,59,.05)}
-.eyebrow .pip{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-.hero h1{font-size:clamp(64px,12vw,180px);margin-bottom:6px}
-.hero h1 .amp{color:var(--brass)}
-.hero .tagline{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(20px,2.4vw,28px);color:var(--paper);margin-bottom:20px}
-.hero .lead{font-size:clamp(15px,1.6vw,17px);color:var(--muted);max-width:500px;margin-bottom:40px}
-.rotor{color:var(--brass);font-weight:600;display:inline-block;transition:opacity .3s}
-.hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.scrollcue{position:absolute;right:46px;bottom:70px;z-index:2;writing-mode:vertical-rl;font-size:10px;letter-spacing:4px;
-  text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:14px}
-.scrollcue .ln{width:1px;height:50px;background:linear-gradient(var(--brass),transparent)}
-@media(max-width:760px){.scrollcue{display:none}}
+.hero{height:100dvh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:100px 48px 72px;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.6) 60%,rgba(0,0,0,.92) 100%)}
 
-/* SECCIONES */
-section{padding:130px 46px;position:relative}
-.wrap{max-width:1320px;margin:0 auto}
-.kick{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--brass);display:flex;align-items:center;gap:12px;margin-bottom:20px}
-.kick::before{content:'';width:30px;height:1px;background:var(--brass)}
-.title{font-size:clamp(44px,6.5vw,96px)}
-.title .serif{display:block;color:var(--brass);font-size:.55em}
-.reveal{opacity:0;transform:translateY(36px);filter:blur(5px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s}
-.reveal.vis{opacity:1;transform:none;filter:none}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid var(--border);padding:7px 14px;border-radius:2px;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:24px}
+.badge-dot{width:6px;height:6px;background:var(--white);border-radius:50%;animation:badgePulse 2s ease-in-out infinite}
+@keyframes badgePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+.hero h1{font-family:'Anton',sans-serif;font-size:clamp(3.5rem,10vw,9rem);line-height:.92;letter-spacing:-.01em;margin-bottom:24px;position:relative;z-index:2}
+.hero h1 .line2{display:block;color:rgba(255,255,255,.45)}
+
+.hero-words{display:inline-block;overflow:hidden;vertical-align:bottom}
+.hero-word{display:block;transition:transform .4s cubic-bezier(.76,0,.24,1),opacity .4s ease;opacity:1}
+.hero-word.out{transform:translateY(-100%);opacity:0}
+.hero-word.in{transform:translateY(100%);opacity:0}
+
+.hero-sub{font-size:.88rem;color:rgba(255,255,255,.55);font-weight:300;margin-bottom:36px;max-width:380px;line-height:1.75;position:relative;z-index:2}
+
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
+.btn-wh{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--white);padding:14px 32px;border-radius:2px;text-decoration:none;border:1px solid var(--white);transition:all .2s;cursor:pointer;font-family:'Inter',sans-serif}
+.btn-wh:hover{background:transparent;color:var(--white)}
+.btn-out{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:transparent;padding:14px 24px;border-radius:2px;text-decoration:none;border:1px solid rgba(255,255,255,.2);transition:all .2s}
+.btn-out:hover{border-color:var(--white)}
+
+.hero-stats{display:none}
+.hero-stat{text-align:right}
+.hero-stat-n{font-family:'Anton',sans-serif;font-size:2.2rem;line-height:1}
+.hero-stat-l{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+
+/* MARQUEE */
+.marquee-wrap{background:var(--white);padding:12px 0;overflow:hidden;white-space:nowrap}
+.marquee-inner{display:inline-flex;animation:marquee 18s linear infinite}
+.marquee-item{font-family:'Anton',sans-serif;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--black);padding:0 24px}
+.marquee-sep{color:var(--muted2);padding:0 8px}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTION */
+section{padding:96px 48px}
+.sec-tag{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sec-tag::before{content:'';display:block;width:20px;height:1px;background:rgba(255,255,255,.3)}
+.sec-title{font-family:'Anton',sans-serif;font-size:clamp(2rem,5vw,4.5rem);line-height:.95;letter-spacing:-.01em;margin-bottom:8px}
+.sec-title em{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:.85em;color:rgba(255,255,255,.5)}
+
+/* DEMO STRIP */
+.demo-strip{background:var(--black2);padding:0 48px 96px}
+.demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.demo-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer}
+.demo-card img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:filter .4s,transform .4s}
+.demo-card:hover img{filter:grayscale(0%);transform:scale(1.04)}
+.demo-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,transparent 50%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px 20px}
+.demo-card-name{font-family:'Anton',sans-serif;font-size:1.6rem;letter-spacing:.02em}
+.demo-card-role{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px}
+.demo-card-services{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
+.demo-card-service{font-size:.72rem;color:rgba(255,255,255,.7);display:flex;justify-content:space-between}
+.demo-card-cta{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white);border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px;display:inline-block;transition:border-color .2s}
+.demo-card:hover .demo-card-cta{border-color:var(--white)}
+
+/* FOTOS GALERÍA */
+.galeria{background:var(--black);padding:0 48px 96px}
+.galeria-title{font-family:'Anton',sans-serif;font-size:clamp(1.8rem,4vw,3.5rem);margin-bottom:32px}
+.galeria-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+.galeria-img{aspect-ratio:1;overflow:hidden}
+.galeria-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:filter .4s,transform .4s}
+.galeria-img:hover img{filter:grayscale(0%);transform:scale(1.06)}
 
 /* SERVICIOS */
-.serv{background:var(--ink2)}
-.serv-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start;margin-top:30px}
-.serv-intro p{color:var(--muted);max-width:340px;margin-top:24px}
-.serv-intro .big-num{font-family:'Anton',sans-serif;font-size:clamp(80px,9vw,150px);color:transparent;-webkit-text-stroke:1px var(--line);line-height:.8;margin-top:40px}
-.serv-list{display:flex;flex-direction:column}
-.srow{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:26px 4px;border-top:1px solid var(--line);cursor:pointer;transition:padding-left .4s var(--ease)}
-.srow:last-child{border-bottom:1px solid var(--line)}
-.srow:hover{padding-left:18px}
-.srow .nm{font-family:'Anton',sans-serif;font-size:clamp(26px,3.2vw,40px);text-transform:uppercase;transition:color .3s}
-.srow:hover .nm{color:var(--brass)}
-.srow .meta{font-size:13px;color:var(--muted);max-width:220px;flex:1;display:none}
-.srow .pr{font-family:'Anton',sans-serif;font-size:clamp(28px,3.4vw,44px);color:var(--brass);white-space:nowrap}
-@media(min-width:1000px){.srow .meta{display:block}}
+.servicios{background:var(--black2)}
+.servicios-grid{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border2)}
+.serv-card{background:var(--black2);padding:32px 24px;transition:background .2s}
+.serv-card:hover{background:#161616}
+.serv-n{font-family:'Anton',sans-serif;font-size:3rem;color:rgba(255,255,255,.05);line-height:1;margin-bottom:16px}
+.serv-name{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.serv-time{font-size:.68rem;color:var(--muted);margin-bottom:14px}
+.serv-price{font-family:'Anton',sans-serif;font-size:1.6rem}
 
-/* EQUIPO */
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:54px}
-.shell{background:rgba(244,236,224,.03);border:1px solid var(--line);border-radius:26px;padding:8px;transition:transform .5s var(--ease),border-color .5s}
-.shell:hover{transform:translateY(-8px);border-color:rgba(199,154,59,.45)}
-.shell:nth-child(2){margin-top:34px}
-.core{border-radius:20px;overflow:hidden;background:var(--ink3)}
-.core .ph{height:340px;background-size:cover;background-position:center top;filter:grayscale(.35) contrast(1.05)}
-.core .info{padding:24px 22px 26px}
-.core .role{font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brass);margin-bottom:10px}
-.core h3{font-size:28px;margin-bottom:8px}
-.core p{font-size:13.5px;color:var(--muted)}
+/* HORARIOS */
+.horarios{background:var(--black)}
+.horarios-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:56px;align-items:start}
+.hor-table{display:flex;flex-direction:column}
+.hor-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border2)}
+.hor-row:first-child{border-top:1px solid var(--border2)}
+.hor-dia{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.hor-hora{font-size:.75rem;font-weight:400}
+.hor-info{display:flex;flex-direction:column;gap:20px}
+.hor-card{background:var(--black3);border:1px solid var(--border2);padding:24px;border-radius:2px}
+.hor-card-title{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px}
+.hor-card-text{font-size:.82rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.7}
 
-/* RESEÑAS */
-.rev{overflow:hidden}
-.tk-mask{position:relative;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);margin-top:50px}
-.tk{display:flex;gap:24px;width:max-content;animation:scrollx 44s linear infinite}
-.tk:hover{animation-play-state:paused}
-@keyframes scrollx{to{transform:translateX(-50%)}}
-.rcard{flex:0 0 380px;background:var(--ink2);border:1px solid var(--line);border-radius:20px;padding:32px}
-.rcard .st{color:var(--brass);letter-spacing:3px;margin-bottom:14px;font-size:14px}
-.rcard .q{font-family:'Fraunces',serif;font-style:italic;font-size:19px;line-height:1.5;color:var(--paper);margin-bottom:18px}
-.rcard .wh{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-
-/* GALERÍA */
-.gal{background:var(--ink2)}
-.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;margin-top:50px}
-.gal-grid figure{overflow:hidden;border-radius:14px;background-size:cover;background-position:center;filter:grayscale(.35) contrast(1.05);transition:transform .7s var(--ease),filter .5s}
-.gal-grid figure:hover{transform:scale(1.04);filter:grayscale(0) contrast(1.05)}
-.g1{grid-column:span 2;grid-row:span 2}.g4{grid-column:span 2}.g6{grid-row:span 2}
-
-/* CTA */
-.cta{text-align:center;position:relative;overflow:hidden;background:var(--ink)}
-.cta::before{content:'RESERVA';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Anton',sans-serif;
-  font-size:clamp(120px,24vw,380px);color:var(--paper);opacity:.04;white-space:nowrap;pointer-events:none}
-.cta .wrap{position:relative;z-index:2}
-.cta h2{font-size:clamp(48px,7vw,110px);margin-bottom:20px}
-.cta p{color:var(--muted);max-width:480px;margin:0 auto 38px}
-
-/* MAPA */
-.mapa{padding:0}
-.mapa iframe{width:100%;height:420px;border:none;filter:grayscale(.8) contrast(1.1)}
-
-/* FOOTER */
-footer{background:#100e0a;border-top:1px solid var(--line);padding:84px 46px 36px}
-.foot{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:46px}
-.foot .fb{font-family:'Anton',sans-serif;font-size:28px;letter-spacing:1px;margin-bottom:16px}
-.foot .fb .amp{color:var(--brass)}
-.foot p,.foot a{color:var(--muted);font-size:14px;margin-bottom:11px;display:block;transition:color .3s}
-.foot a:hover{color:var(--paper)}
-.foot h4{font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brass);margin-bottom:18px;font-weight:600}
-.fsoc{display:flex;gap:14px;margin-top:6px}.fsoc a{color:var(--muted)}.fsoc a:hover{color:var(--brass)}.fsoc svg{width:20px;height:20px}
-.copy{max-width:1320px;margin:54px auto 0;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted)}
-.copy a{color:var(--brass)}
+/* FAB */
+.fab{position:fixed;bottom:24px;right:24px;z-index:200;width:54px;height:54px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.6);transition:transform .2s;border:none}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:22px;height:22px}
+.fab-badge{position:absolute;top:-3px;right:-3px;width:15px;height:15px;background:#ff3b30;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.48rem;font-weight:700;color:#fff}
 
 /* CHATBOT */
-.cbtip{position:fixed;bottom:44px;right:104px;z-index:9998;background:var(--ink2);color:var(--brass);padding:10px 18px;border-radius:40px;
-  font-size:13px;border:1px solid var(--line);white-space:nowrap;pointer-events:none;animation:bob 2.6s ease-in-out infinite;transition:opacity .5s}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.cbfab{position:fixed;bottom:28px;right:28px;z-index:9999;width:64px;height:64px;border-radius:50%;background:var(--brass);border:none;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;box-shadow:0 14px 38px rgba(199,154,59,.45);font-size:26px;transition:transform .4s var(--ease)}
-.cbfab:hover{transform:scale(1.08) rotate(-6deg)}
-.cbmod{position:fixed;bottom:28px;right:28px;z-index:10000;width:400px;max-width:calc(100vw - 30px);height:640px;max-height:calc(100dvh - 56px);
-  background:var(--ink2);border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.65);display:none;flex-direction:column;overflow:hidden}
-.cbmod.open{display:flex;animation:up .45s var(--ease)}
-@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.cbhead{background:var(--ink3);padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
-.cbhi{display:flex;align-items:center;gap:12px}
-.cbav{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--brass),#8a6a22);display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;color:var(--ink);font-size:20px}
-.cbhead h4{font-family:'Anton',sans-serif;letter-spacing:1px;color:var(--paper);font-size:18px;font-weight:400}
-.cbhead .stt{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px;margin-top:2px}
-.don{width:7px;height:7px;background:#3ddc84;border-radius:50%;animation:bl 1.6s infinite}
-@keyframes bl{0%,100%{opacity:1}50%{opacity:.35}}
-.cbx{background:transparent;border:none;color:var(--brass);font-size:20px;cursor:pointer;line-height:1}
-.cbbody{flex:1;overflow-y:auto;padding:20px;background:var(--ink)}
-.cbbody::-webkit-scrollbar{width:5px}.cbbody::-webkit-scrollbar-thumb{background:var(--brass);border-radius:3px}
-.m{margin-bottom:14px;display:flex;animation:fi .3s}
-@keyframes fi{from{opacity:0}to{opacity:1}}
-.m.bot{justify-content:flex-start}.m.usr{justify-content:flex-end}
-.bub{max-width:84%;padding:12px 16px;border-radius:14px;font-size:14px;line-height:1.5;white-space:pre-line}
-.m.bot .bub{background:var(--ink2);color:var(--paper);border:1px solid var(--line);border-bottom-left-radius:4px}
-.m.usr .bub{background:var(--brass);color:var(--ink);border-bottom-right-radius:4px;font-weight:500}
-.typ{display:flex;gap:4px;padding:12px 16px;background:var(--ink2);border:1px solid var(--line);border-radius:14px;width:fit-content;margin-bottom:14px}
-.typ span{width:7px;height:7px;background:var(--brass);border-radius:50%;animation:td 1.3s infinite}
-.typ span:nth-child(2){animation-delay:.2s}.typ span:nth-child(3){animation-delay:.4s}
-@keyframes td{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
-.qk{display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
-.qk button{background:var(--ink3);border:1px solid var(--line);color:var(--brass);padding:10px 14px;border-radius:14px;cursor:pointer;
-  font-size:13px;text-align:left;transition:all .25s;font-family:'Archivo',sans-serif;display:flex;justify-content:space-between;align-items:center}
-.qk button:hover{background:var(--brass);color:var(--ink);border-color:var(--brass)}
-.qk button .pr{color:var(--brass2);font-weight:600}
-.qk button:hover .pr{color:var(--ink)}
+.cb-modal{position:fixed;bottom:92px;right:24px;width:350px;background:#111;border:1px solid rgba(255,255,255,.1);border-radius:10px;z-index:199;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.9);max-height:580px}
+.cb-modal.open{display:flex}
+.cb-head{background:#000;padding:18px 18px 14px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between}
+.cb-head-l{display:flex;align-items:center;gap:10px}
+.cb-av{width:36px;height:36px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:.9rem;color:#000}
+.cb-name{font-size:.82rem;font-weight:600}
+.cb-status{font-size:.62rem;color:rgba(255,255,255,.45);display:flex;align-items:center;gap:4px}
+.cb-status::before{content:'';width:5px;height:5px;background:#fff;border-radius:50%;display:block}
+.cb-x{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.2rem;line-height:1}
+.cb-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;max-height:400px}
+.cb-msgs::-webkit-scrollbar{width:2px}
+.cb-msgs::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1)}
+.msg{max-width:86%;padding:9px 13px;border-radius:8px;font-size:.78rem;line-height:1.55;font-weight:300}
+.msg-bot{background:rgba(255,255,255,.07);align-self:flex-start;border-radius:3px 8px 8px 8px}
+.msg-user{background:var(--white);color:#000;align-self:flex-end;border-radius:8px 3px 8px 8px;font-weight:400}
+.msg-typing{display:flex;gap:4px;padding:11px 13px;align-items:center}
+.msg-typing span{width:5px;height:5px;background:var(--muted);border-radius:50%;animation:typing .9s infinite}
+.msg-typing span:nth-child(2){animation-delay:.2s}
+.msg-typing span:nth-child(3){animation-delay:.4s}
+@keyframes typing{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.cb-opts{padding:8px 14px;display:flex;flex-direction:column;gap:5px}
+.cb-opt{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:9px 12px;font-size:.74rem;color:var(--white);cursor:pointer;text-align:left;transition:all .2s;font-family:'Inter',sans-serif}
+.cb-opt:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2)}
+.cb-inp-wrap{padding:10px 14px;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:7px}
+.cb-inp{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:9px 12px;font-size:.76rem;color:var(--white);font-family:'Inter',sans-serif;outline:none}
+.cb-inp::placeholder{color:var(--muted)}
+.cb-send{background:var(--white);border:none;border-radius:5px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
+.cb-send svg{width:13px;height:13px}
 
-/* CALENDARIO */
-.cal{background:rgba(0,0,0,.3);border:1px solid rgba(199,154,59,.3);border-radius:14px;padding:16px;margin:8px 0 14px;max-width:290px}
-.cal-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.cal-h b{font-family:'Archivo',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--paper)}
-.cal-h button{background:var(--ink);border:1px solid var(--line);color:var(--brass);width:28px;height:28px;border-radius:8px;cursor:pointer;font-size:14px}
-.cal-h button:disabled{opacity:.3;cursor:default}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
-.cal-grid .wd{font-size:9px;text-align:center;color:var(--muted);letter-spacing:1px;padding-bottom:4px}
-.cal-grid .dy{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:8px;cursor:pointer;color:var(--paper);transition:all .2s;border:none;background:transparent}
-.cal-grid .dy:hover:not(:disabled){background:rgba(199,154,59,.2)}
-.cal-grid .dy.sel{background:var(--brass);color:var(--ink);font-weight:600}
-.cal-grid .dy.off{color:transparent;pointer-events:none;background:transparent}
-.cal-grid .dy:disabled{color:#4a4238;cursor:not-allowed;text-decoration:line-through}
-.hours{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0 14px;max-width:290px}
-.hours button{background:var(--ink3);border:1px solid var(--line);color:var(--brass);padding:9px 4px;border-radius:10px;cursor:pointer;font-size:12px;font-family:'Archivo',sans-serif;transition:all .25s;text-align:center}
-.hours button:hover{background:var(--brass);color:var(--ink)}
-.hours button.dis{opacity:.3;cursor:not-allowed;pointer-events:none}
 
-.cbform{padding:10px 16px;background:var(--ink3);border-top:1px solid var(--line);display:flex;gap:8px}
-.cbform input{flex:1;background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 14px;color:var(--text);font-family:'Archivo',sans-serif;font-size:14px;outline:none;transition:border-color .3s}
-.cbform input:focus{border-color:var(--brass)}
-.cbform input::placeholder{color:var(--muted)}
-.cbform button{background:var(--brass);border:none;border-radius:10px;width:40px;height:40px;cursor:pointer;color:var(--ink);font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.cbform button:hover{background:var(--brass2)}
-.cbfoot2{padding:8px;background:var(--ink3);border-top:1px solid var(--line);text-align:center;font-size:10px;color:var(--muted);letter-spacing:1px}
+/* RESEÑAS */
+.resenas{background:var(--black2);padding:96px 48px}
+.resenas-stars{font-size:1.4rem;color:#fff;margin:20px 0 40px;display:flex;align-items:center;gap:10px}
+.resenas-stars span{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.resenas-track-wrap{overflow:hidden;position:relative;margin:0 -48px;padding:0 48px}
+.resenas-track-wrap::before,.resenas-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.resenas-track-wrap::before{left:0;background:linear-gradient(90deg,var(--black2),transparent)}
+.resenas-track-wrap::after{right:0;background:linear-gradient(-90deg,var(--black2),transparent)}
+.resenas-track{display:flex;gap:16px;animation:scrollResenas 40s linear infinite;width:max-content}
+.resenas-track:hover{animation-play-state:paused}
+@keyframes scrollResenas{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.res-card{background:var(--black3);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:24px;width:280px;flex-shrink:0;transition:border-color .2s}
+.res-card:hover{border-color:rgba(255,255,255,.2)}
+.res-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.res-name{font-size:.82rem;font-weight:600}
+.res-date{font-size:.65rem;color:rgba(255,255,255,.35)}
+.res-stars{font-size:.9rem;color:#fff;margin-bottom:6px;letter-spacing:2px}
+.res-serv{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:12px}
+.res-text{font-size:.8rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.6}
+@media(max-width:900px){.resenas{padding:64px 20px}.resenas-track-wrap{margin:0 -20px;padding:0 20px}}
+
+/* FOOTER */
+footer{background:#000;border-top:1px solid var(--border2);padding:40px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.ft-logo .italic{font-family:Georgia,serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.45)}
+.ft-logo .sans{font-family:'Anton',sans-serif;font-size:.95rem;color:rgba(255,255,255,.45);letter-spacing:.06em}
+footer p{font-size:.65rem;color:var(--muted)}
+footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .nav{padding:14px 20px}.nav.s{padding:10px 20px}
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--ink);padding:24px;gap:18px;border-bottom:1px solid var(--line)}
-  .nav-links.open{display:flex}
-  .menu-tog{display:block}
-  section{padding:90px 20px}
-  .hero{padding:0 20px 60px}
-  .serv-grid{grid-template-columns:1fr;gap:36px}
-  .team-grid{grid-template-columns:1fr;gap:20px}.shell:nth-child(2){margin-top:0}
-  .gal-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}.g1{grid-column:span 2}
-  .foot{grid-template-columns:1fr;gap:34px}
-  footer{padding:60px 20px 28px}
+  .nav{padding:16px 20px}
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-mob{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(0,0,0,.97);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--border2);z-index:99}
+  .nav-mob.open{display:flex}
+  .nav-mob a{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--border2)}
+  .hero{padding:60px 20px 60px}
+  section,.demo-strip,.galeria{padding-left:20px;padding-right:20px}
+  .demo-grid{grid-template-columns:1fr}
+  .galeria-grid{grid-template-columns:repeat(2,1fr)}
+  .servicios-grid{grid-template-columns:1fr 1fr}
+  .horarios-inner{grid-template-columns:1fr;gap:36px}
+  footer{flex-direction:column;text-align:center;padding:28px 20px}
+  .cb-modal{width:calc(100vw - 24px);right:12px;bottom:84px}
 }
 @media(max-width:600px){
-  .hero h1{font-size:clamp(52px,16vw,88px)}
-  .rcard{flex-basis:300px}
-  .gal-grid{grid-template-columns:1fr;grid-auto-rows:200px}.g1,.g4{grid-column:span 1}
-  .cbmod{bottom:0;right:0;left:0;width:100%;height:94dvh;max-height:94dvh;border-radius:16px 16px 0 0}
-  .cbfab{bottom:18px;right:18px}.cbtip{display:none}
-}
-@media(max-width:768px){#bgVid{display:none}}
-@media(prefers-reduced-motion:reduce){
-  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
-  .reveal{opacity:1!important;transform:none!important;filter:none!important}
-  .tk{animation:none}.hero-bg.fallback{animation:none}
+  .hero h1{font-size:3.2rem}
+  .servicios-grid{grid-template-columns:1fr}
+  .galeria-grid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
 <body>
-<div class="grain"></div>
-<div class="cur" id="cur"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-logo">BARBERS CLUB</div>
+</div>
 
 <!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="#top" class="brand">RODRIGO <span class="amp">&amp;</span> PELUQUEROS</a>
-  <div class="nav-links" id="navlinks">
-    <a class="lk" href="#servicios">Servicios</a>
-    <a class="lk" href="#equipo">Equipo</a>
-    <a class="lk" href="#galeria">Galería</a>
-    <a class="lk" href="#contacto">Contacto</a>
-    <span class="soc">
-      <a href="https://www.instagram.com/rodrigo.peluqueros" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      </a>
-      <a href="https://wa.me/34687813295" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l1.9-5.1A8.5 8.5 0 1 1 12 20.5a8.4 8.4 0 0 1-4.1-1.1L3 21z"/><path d="M9 9c0 4 3 6 6 6"/></svg>
-      </a>
-    </span>
-    <button class="btn" onclick="openChat()">Pedir cita<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+<nav class="nav">
+  <a href="#top" class="nav-logo">
+    <span class="italic">barbers</span><span class="sans"> club</span>
+  </a>
+  <div class="nav-links">
+    <a href="#barberos">Barberos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#galeria">Galería</a>
+    <a href="#horarios">Horarios</a>
   </div>
-  <button class="menu-tog" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menú">☰</button>
+  <a href="#" class="nav-cta" onclick="openChat();return false">Reservar</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<!-- NAV MÓVIL -->
+<div class="nav-mob" id="navMob">
+  <a href="#barberos" onclick="toggleMenu()">Barberos</a>
+  <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+  <a href="#galeria" onclick="toggleMenu()">Galería</a>
+  <a href="#horarios" onclick="toggleMenu()">Horarios</a>
+  <button class="btn-wh" onclick="openChat();toggleMenu()" style="margin-top:8px">Reservar cita</button>
+</div>
+
 <!-- HERO -->
-<header class="hero" id="top">
-  <div class="hero-bg" id="heroBg">
-    <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=80" id="bgVid">
-      <source src="https://assets.mixkit.co/videos/43227/43227-720.mp4" type="video/mp4">
-    </video>
+<section class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline preload="none"
+    poster="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpg&q=60&w=1200&auto=format&fit=crop">
+    <source src="https://assets.mixkit.co/videos/39145/39145-720.mp4" type="video/mp4">
+    <source src="https://assets.mixkit.co/videos/26135/26135-720.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-badge">
+    <div class="badge-dot"></div>
+    Barbería Premium · Madrid · Reserva Online
   </div>
-  <div class="ghost" aria-hidden="true">RODRIGO</div>
-  <div class="hero-in">
-    <span class="eyebrow"><span class="pip"></span> Peluquería · Majadahonda · Madrid</span>
-    <h1>RODRIGO <span class="amp">&amp;</span> PELUQUEROS</h1>
-    <div class="tagline serif">Cada corte cuenta una historia.</div>
-    <p class="lead">Peluquería para hombre, niños y bebés en Majadahonda. Aquí se cuida <span class="rotor" id="rotor">el fade</span>.</p>
-    <div class="hero-cta">
-      <button class="btn" onclick="openChat()">Pedir cita<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-      <a href="#servicios" class="btn btn-out">Ver servicios</a>
+
+  <h1>
+    EL CORTE<br>
+    <span class="line2">QUE TE
+    <span class="hero-words">
+      <span class="hero-word" id="heroWord">DEFINE.</span>
+    </span>
+    </span>
+  </h1>
+
+  <p class="hero-sub">Elige a Thiago o Kimbo. Reserva en 2 minutos. Sin llamadas, sin esperas. Tu barbero listo cuando tú llegues.</p>
+
+  <div class="hero-actions">
+    <button class="btn-wh" onclick="openChat()">Reservar ahora</button>
+    <a href="#servicios" class="btn-out">Ver servicios</a>
+  </div>
+
+
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span class="marquee-item">Corte</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Barba</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Thiago</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Kimbo</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Sin Esperas</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Reserva Online</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Ritual Barba</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Color & Mechas</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Madrid</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Corte</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Barba</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Thiago</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Kimbo</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Sin Esperas</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Reserva Online</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Ritual Barba</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Color & Mechas</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Madrid</span><span class="marquee-sep">✦</span>
+  </div>
+</div>
+
+<!-- BARBEROS (demo strip) -->
+<div class="demo-strip" id="barberos">
+  <div style="padding-top:96px;margin-bottom:48px">
+    <div class="sec-tag">Nuestros barberos</div>
+    <div class="sec-title">ELIGE CON<br><em>quién quieres</em></div>
+  </div>
+  <div class="demo-grid">
+    <!-- THIAGO -->
+    <div class="demo-card" onclick="openChatBarbero('Thiago')">
+      <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Thiago barbero" width="600" height="800" loading="lazy">
+      <div class="demo-card-overlay">
+        <div class="demo-card-role">Barbero Senior</div>
+        <div class="demo-card-name">THIAGO</div>
+        <div class="demo-card-services">
+          <div class="demo-card-service"><span>Corte</span><span>15 €</span></div>
+          <div class="demo-card-service"><span>Corte + Barba</span><span>22 €</span></div>
+          <div class="demo-card-service"><span>Ritual de Barba</span><span>17 €</span></div>
+        </div>
+        <span class="demo-card-cta">Reservar con Thiago →</span>
+      </div>
+    </div>
+    <!-- KIMBO -->
+    <div class="demo-card" onclick="openChatBarbero('Kimbo')">
+      <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Kimbo barbero" width="600" height="800" loading="lazy">
+      <div class="demo-card-overlay">
+        <div class="demo-card-role">Barbero Senior</div>
+        <div class="demo-card-name">KIMBO</div>
+        <div class="demo-card-services">
+          <div class="demo-card-service"><span>Corte</span><span>15 €</span></div>
+          <div class="demo-card-service"><span>Corte + Barba</span><span>22 €</span></div>
+          <div class="demo-card-service"><span>Ritual de Barba</span><span>17 €</span></div>
+        </div>
+        <span class="demo-card-cta">Reservar con Kimbo →</span>
+      </div>
+    </div>
+    <!-- CUALQUIERA -->
+    <div class="demo-card" onclick="openChat()">
+      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Barbería Barbers Club" width="600" height="800" loading="lazy">
+      <div class="demo-card-overlay">
+        <div class="demo-card-role">Primer disponible</div>
+        <div class="demo-card-name">¿EL MÁS<br>RÁPIDO?</div>
+        <div class="demo-card-services">
+          <div class="demo-card-service"><span>Cualquier servicio</span><span>—</span></div>
+          <div class="demo-card-service"><span>Antes disponible</span><span>—</span></div>
+        </div>
+        <span class="demo-card-cta">Reservar ahora →</span>
+      </div>
     </div>
   </div>
-  <div class="scrollcue"><span>Scroll</span><span class="ln"></span></div>
-</header>
+</div>
+
+<!-- GALERÍA -->
+<div class="galeria" id="galeria">
+  <div class="galeria-title">NUESTRO<br><span style="font-family:Georgia,serif;font-style:italic;font-weight:400;color:rgba(255,255,255,.4)">trabajo.</span></div>
+  <div class="galeria-grid">
+    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Corte de pelo barbería" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Barbero profesional" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Afeitado clásico barba" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Corte moderno barbería" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Barbero en acción" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Interior barbería premium" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Ritual de barba" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Arreglo barba profesional" width="400" height="400" loading="lazy"></div>
+  </div>
+</div>
 
 <!-- SERVICIOS -->
-<section id="servicios" class="serv">
-  <div class="wrap">
-    <div class="kick reveal">La carta</div>
-    <div class="serv-grid">
-      <div class="serv-intro">
-        <h2 class="title reveal">Servicios <span class="serif">&amp; tarifas</span></h2>
-        <p class="reveal">Sin sorpresas. Precio cerrado que incluye lavado y productos de acabado. Reserva con BLADE y elige tu momento.</p>
-        <div class="big-num reveal">08</div>
-      </div>
-      <div class="serv-list">
-        <div class="srow reveal" onclick="openChatSrv('Corte masculino',13)"><span class="nm">Corte masculino</span><span class="meta">Lavado, corte a tijera o máquina y peinado.</span><span class="pr">13€</span></div>
-        <div class="srow reveal" onclick="openChatSrv('Corte + barba',17)"><span class="nm">Corte + barba</span><span class="meta">El combo completo. Cabeza y barba a juego.</span><span class="pr">17€</span></div>
-        <div class="srow reveal" onclick="openChatSrv('Arreglo de barba',11)"><span class="nm">Arreglo de barba</span><span class="meta">Perfilado, recorte y acabado. Barba en su sitio.</span><span class="pr">11€</span></div>
-        <div class="srow reveal" onclick="openChatSrv('Afeitado clásico',12)"><span class="nm">Afeitado clásico</span><span class="meta">Navaja, toalla caliente y bálsamo. Ritual.</span><span class="pr">12€</span></div>
-        <div class="srow reveal" onclick="openChatSrv('Corte niños',12)"><span class="nm">Corte niños</span><span class="meta">Para los más pequeños. Sin dramas.</span><span class="pr">12€</span></div>
-        <div class="srow reveal" onclick="openChatSrv('Corte bebés',10)"><span class="nm">Corte bebés</span><span class="meta">Los primeros cortes, con toda la calma.</span><span class="pr">10€</span></div>
-        <div class="srow reveal" onclick="openChatSrv('Corte fade',13)"><span class="nm">Corte fade</span><span class="meta">Degradado en todos sus estilos.</span><span class="pr">13€</span></div>
-        <div class="srow reveal" onclick="openChatSrv('Color',22)"><span class="nm">Color</span><span class="meta">Color completo con lavado incluido.</span><span class="pr">22€</span></div>
-      </div>
+<section class="servicios" id="servicios">
+  <div class="sec-tag">Lo que hacemos</div>
+  <div class="sec-title">SERVICIOS</div>
+  <div class="servicios-grid">
+    <div class="serv-card">
+      <div class="serv-n">01</div>
+      <div class="serv-name">Corte</div>
+      <div class="serv-time">30 min</div>
+      <div class="serv-price">15€</div>
+    </div>
+    <div class="serv-card">
+      <div class="serv-n">02</div>
+      <div class="serv-name">Corte + Barba</div>
+      <div class="serv-time">45 min</div>
+      <div class="serv-price">22€</div>
+    </div>
+    <div class="serv-card">
+      <div class="serv-n">03</div>
+      <div class="serv-name">Ritual de Barba</div>
+      <div class="serv-time">30 min</div>
+      <div class="serv-price">17€</div>
+    </div>
+    <div class="serv-card">
+      <div class="serv-n">04</div>
+      <div class="serv-name">Arreglo Barba</div>
+      <div class="serv-time">20 min</div>
+      <div class="serv-price">10€</div>
+    </div>
+    <div class="serv-card">
+      <div class="serv-n">05</div>
+      <div class="serv-name">Corte + Cejas</div>
+      <div class="serv-time">30 min</div>
+      <div class="serv-price">17€</div>
+    </div>
+    <div class="serv-card">
+      <div class="serv-n">06</div>
+      <div class="serv-name">Corte Jubilado</div>
+      <div class="serv-time">20 min</div>
+      <div class="serv-price">12€</div>
+    </div>
+    <div class="serv-card">
+      <div class="serv-n">07</div>
+      <div class="serv-name">Color Global</div>
+      <div class="serv-time">240 min</div>
+      <div class="serv-price" style="font-size:1.1rem;margin-top:6px">A consultar</div>
+    </div>
+    <div class="serv-card">
+      <div class="serv-n">08</div>
+      <div class="serv-name">Mechas</div>
+      <div class="serv-time">180 min</div>
+      <div class="serv-price" style="font-size:1.1rem;margin-top:6px">A consultar</div>
     </div>
   </div>
 </section>
 
-<!-- EQUIPO -->
-<section id="equipo">
-  <div class="wrap">
-    <div class="kick reveal">El equipo</div>
-    <h2 class="title reveal">Expertos en <span class="serif">tu imagen</span></h2>
-    <div class="team-grid">
-      <div class="shell reveal"><div class="core">
-        <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&fm=jpg&q=80')"></div>
-        <div class="info"><div class="role">Maestro peluquero · Fundador</div><h3>Rodrigo</h3><p>Más de 20 años cortando en Majadahonda. Especialista en fade, corte clásico y tratamientos capilares.</p></div>
-      </div></div>
-      <div class="shell reveal"><div class="core">
-        <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&fm=jpg&q=80')"></div>
-        <div class="info"><div class="role">Estilista senior</div><h3>Carlos</h3><p>Experto en color, reflejos y desrizante. Tu cabello en las mejores manos.</p></div>
-      </div></div>
-      <div class="shell reveal"><div class="core">
-        <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&fm=jpg&q=80')"></div>
-        <div class="info"><div class="role">Barbero</div><h3>Miguel</h3><p>Especialista en barba y afeitado clásico a navaja. Mano firme y acabado perfecto.</p></div>
-      </div></div>
+<!-- HORARIOS -->
+<section class="horarios" id="horarios">
+  <div class="sec-tag">Cuándo encontrarnos</div>
+  <div class="sec-title">HORARIOS</div>
+  <div class="horarios-inner">
+    <div class="hor-table">
+      <div class="hor-row"><span class="hor-dia">Lunes</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
+      <div class="hor-row"><span class="hor-dia">Martes</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
+      <div class="hor-row"><span class="hor-dia">Miércoles</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
+      <div class="hor-row"><span class="hor-dia">Jueves</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
+      <div class="hor-row"><span class="hor-dia">Viernes</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
+      <div class="hor-row"><span class="hor-dia">Sábado</span><span class="hor-hora">10:00–15:00</span></div>
+      <div class="hor-row"><span class="hor-dia">Domingo</span><span class="hor-hora">10:00–15:00</span></div>
+    </div>
+    <div class="hor-info">
+      <div class="hor-card">
+        <div class="hor-card-title">Reserva online 24/7</div>
+        <div class="hor-card-text">Elige barbero, servicio y horario en menos de 2 minutos. Sin llamadas, sin esperas.</div>
+      </div>
+      <div class="hor-card">
+        <div class="hor-card-title">Thiago y Kimbo</div>
+        <div class="hor-card-text">Cada barbero gestiona su propia agenda. Reserva directamente con el que prefieras o con el primero disponible.</div>
+      </div>
+      <div class="hor-card">
+        <div class="hor-card-title">Color y mechas</div>
+        <div class="hor-card-text">Para servicios de color consulta disponibilidad en el chat. Los tiempos varían según el tratamiento.</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- RESEÑAS -->
-<section class="rev">
-  <div class="wrap">
-    <div class="kick reveal">4.9 ★ · Reseñas Google</div>
-    <h2 class="title reveal">Lo que dice <span class="serif">Majadahonda</span></h2>
-  </div>
-  <div class="tk-mask">
-    <div class="tk">
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"El mejor fade de Majadahonda sin duda. Rodrigo sabe exactamente lo que quieres."</p><div class="wh">— Alejandro M.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"Llevo años viniendo y nunca me han fallado. Precio justo y trato cercano."</p><div class="wh">— Fernando L.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"Llevé a mi hijo de 3 años y lo trataron genial. Sin lloros y el corte perfecto."</p><div class="wh">— Natalia R.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"El afeitado clásico es una experiencia. Toalla caliente, navaja y bálsamo. 10/10."</p><div class="wh">— Javier T.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"Reservé por el chat en 30 segundos. Muy cómodo y muy profesional."</p><div class="wh">— Marcos S.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"El fade que me hicieron fue exactamente lo que pedí. Artistas con la maquinilla."</p><div class="wh">— Diego P.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"El mejor fade de Majadahonda sin duda. Rodrigo sabe exactamente lo que quieres."</p><div class="wh">— Alejandro M.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"Llevo años viniendo y nunca me han fallado. Precio justo y trato cercano."</p><div class="wh">— Fernando L.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"Llevé a mi hijo de 3 años y lo trataron genial. Sin lloros y el corte perfecto."</p><div class="wh">— Natalia R.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"El afeitado clásico es una experiencia. Toalla caliente, navaja y bálsamo. 10/10."</p><div class="wh">— Javier T.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"Reservé por el chat en 30 segundos. Muy cómodo y muy profesional."</p><div class="wh">— Marcos S.</div></div>
-      <div class="rcard"><div class="st">★★★★★</div><p class="q">"El fade que me hicieron fue exactamente lo que pedí. Artistas con la maquinilla."</p><div class="wh">— Diego P.</div></div>
+<section class="resenas" id="resenas">
+  <div class="sec-tag">Lo que dicen nuestros clientes</div>
+  <div class="sec-title">RESEÑAS<br><span style="font-family:Georgia,serif;font-style:italic;font-weight:400;color:rgba(255,255,255,.4)">reales.</span></div>
+  <div class="resenas-stars">★★★★★ <span>22 reseñas · 5.0 de 5</span></div>
+  <div class="resenas-track-wrap">
+    <div class="resenas-track" id="resenasTrack">
+      <div class="res-card"><div class="res-head"><div class="res-name">Gonzalo</div><div class="res-date">2 jul 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Sitio nuevo y de calidad muy buen corte para repetir</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Aitor</div><div class="res-date">1 jul 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Todo perfecto, los peluqueros los mejores y muy rápidos</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Kevin</div><div class="res-date">30 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">100% recomendable Thiago es un profesional de 10 y siempre es muy atento</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">David</div><div class="res-date">29 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Muy buen trato y como siempre trabajazo Thiago el mejor</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Marco</div><div class="res-date">27 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Thiago es un magnífico profesional. Su trabajo es impecable, cuida cada detalle y el resultado siempre es de diez. ¡Totalmente recomendable!</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">David</div><div class="res-date">26 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Muy buena atención. Corte de pelo fenomenal.</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Mariana</div><div class="res-date">23 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Thiago siempre deja a mi hijo muy contento. Gracias!!</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Ricardo</div><div class="res-date">17 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Thiago kimbo excelente, todo muy chulo el trato estupendo como siempre.</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Arturo</div><div class="res-date">16 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">El local y los productos usados están bien cuidados, el chico es muy majo y el corte muy detallado, hecho con cuidado y bien.</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Cesar</div><div class="res-date">13 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Kimbo de 10. Y local muy cuidado</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Juan Manuel</div><div class="res-date">11 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Precioso el corte de mi hijo.</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">David</div><div class="res-date">5 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte + Barba · Kimbo</div><div class="res-text">Corte + barba por Kimbo, excelente trato, muy amable y el corte perfecto tal cual lo pedí</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Jonatan</div><div class="res-date">4 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte + Barba · Thiago</div><div class="res-text">Local nuevo y amplio. Corte de pelo y arreglo de barba con mucho detalle. Lo recomiendo 100%</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">David</div><div class="res-date">3 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Fenomenal. Trato excepcional. Sabe cuidar al cliente.</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Kevin</div><div class="res-date">3 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">De 10 como siempre 100% recomendable</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Jose Luis</div><div class="res-date">2 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Espectacular lo amables y profesionales que son, te ofrecen bebida al entrar, respecto al corte de pelo lo clavan como tú se lo explicas. Volveremos</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Daniel</div><div class="res-date">2 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte + Barba · Thiago</div><div class="res-text">Todo perfecto como siempre</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Rolando</div><div class="res-date">1 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">de 10! sois increibles</div></div>
+      <!-- Duplicados para loop infinito -->
+      <div class="res-card"><div class="res-head"><div class="res-name">Gonzalo</div><div class="res-date">2 jul 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Sitio nuevo y de calidad muy buen corte para repetir</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Aitor</div><div class="res-date">1 jul 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Todo perfecto, los peluqueros los mejores y muy rápidos</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Marco</div><div class="res-date">27 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Thiago es un magnífico profesional. Su trabajo es impecable, cuida cada detalle y el resultado siempre es de diez.</div></div>
+      <div class="res-card"><div class="res-head"><div class="res-name">Cesar</div><div class="res-date">13 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Kimbo de 10. Y local muy cuidado</div></div>
     </div>
   </div>
 </section>
-
-<!-- GALERÍA -->
-<section id="galeria" class="gal">
-  <div class="wrap">
-    <div class="kick reveal">El local</div>
-    <h2 class="title reveal">Dentro de <span class="serif">la peluquería</span></h2>
-    <div class="gal-grid reveal">
-      <figure class="g1" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&fm=jpg&q=80')"></figure>
-      <figure style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&fm=jpg&q=80')"></figure>
-      <figure class="g6" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&fm=jpg&q=80')"></figure>
-      <figure class="g4" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&fm=jpg&q=80')"></figure>
-      <figure style="background-image:url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&fm=jpg&q=80')"></figure>
-      <figure style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&fm=jpg&q=80')"></figure>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="wrap">
-    <h2 class="reveal">¿Listo para el corte?</h2>
-    <p class="reveal">Sin esperas. Cuéntale a BLADE qué quieres y te damos el hueco perfecto.</p>
-    <button class="btn reveal" onclick="openChat()">Pedir cita ahora<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-  </div>
-</section>
-
-<!-- MAPA -->
-<div class="mapa">
-  <iframe src="https://maps.google.com/maps?q=Calle+Iglesia+3,+Majadahonda,+Madrid&output=embed" loading="lazy" title="Ubicación Rodrigo Peluqueros"></iframe>
-</div>
 
 <!-- FOOTER -->
-<footer id="contacto">
-  <div class="foot">
-    <div>
-      <div class="fb">RODRIGO <span class="amp">&amp;</span> PELUQUEROS</div>
-      <p>Peluquería para hombre, infantil y bebés en Majadahonda desde hace más de 20 años.</p>
-      <div class="fsoc" style="margin-top:16px">
-        <a href="https://www.instagram.com/rodrigo.peluqueros" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://wa.me/34687813295" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l1.9-5.1A8.5 8.5 0 1 1 12 20.5a8.4 8.4 0 0 1-4.1-1.1L3 21z"/><path d="M9 9c0 4 3 6 6 6"/></svg>
-        </a>
-      </div>
-      <p style="margin-top:16px;font-size:11px;letter-spacing:1px">WEB CREADA POR <a href="https://whitemoon.es" style="color:var(--brass)">WHITEMOON AGENCIA IA</a></p>
-    </div>
-    <div>
-      <h4>Dónde estamos</h4>
-      <p>Calle Iglesia, 3 Local 2</p>
-      <p>28220 Majadahonda, Madrid</p>
-      <a href="tel:912543968" style="margin-top:10px">912 543 968</a>
-      <a href="tel:687813295">687 813 295</a>
-      <a href="mailto:Cobacho1977@gmail.com">Cobacho1977@gmail.com</a>
-    </div>
-    <div>
-      <h4>Horario</h4>
-      <p>Lunes a Viernes</p>
-      <p>10:00 – 14:00 / 16:30 – 20:00</p>
-      <p style="margin-top:10px">Sábado · 10:00 – 14:00</p>
-      <p>Domingo · Cerrado</p>
-    </div>
+<footer>
+  <div class="ft-logo">
+    <span class="italic">barbers</span><span class="sans"> club</span>
   </div>
-  <div class="copy">
-    <span>© 2026 Rodrigo Peluqueros · Majadahonda, Madrid</span>
-    <span>Web creada por <a href="https://whitemoon.es">WhiteMoon Agencia IA</a></span>
-  </div>
+  <p>© 2026 Barbers Club · Todos los derechos reservados</p>
+  <a href="https://whitemoon.es">Demo by WhiteMoon Agencia IA</a>
 </footer>
 
-<!-- CHATBOT -->
-<div class="cbtip" id="cbtip">✂ ¿Te ayudo con tu cita?</div>
-<button class="cbfab" id="cbfab" onclick="openChat()" aria-label="Abrir asistente BLADE">✂</button>
+<!-- FAB -->
+<button class="fab" onclick="openChat()" aria-label="Reservar cita">
+  <div class="fab-badge">1</div>
+  <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2">
+    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+  </svg>
+</button>
 
-<div class="cbmod" id="cbmod">
-  <div class="cbhead">
-    <div class="cbhi">
-      <div class="cbav">B</div>
+<!-- CHATBOT -->
+<div class="cb-modal" id="cbModal">
+  <div class="cb-head">
+    <div class="cb-head-l">
+      <div class="cb-av">BC</div>
       <div>
-        <h4>BLADE</h4>
-        <div class="stt"><span class="don"></span> Disponible ahora</div>
+        <div class="cb-name">Barbers Club</div>
+        <div class="cb-status">Disponible ahora</div>
       </div>
     </div>
-    <button class="cbx" onclick="closeChat()" aria-label="Cerrar">✕</button>
+    <button class="cb-x" onclick="closeChat()">×</button>
   </div>
-  <div class="cbbody" id="cbbody"></div>
-  <div class="cbform">
-    <input id="cbinput" type="text" placeholder="Escribe aquí..." autocomplete="off" onkeydown="if(event.key==='Enter')sendMsg()">
-    <button onclick="sendMsg()" aria-label="Enviar">→</button>
+  <div class="cb-msgs" id="cbMsgs"></div>
+  <div class="cb-opts" id="cbOpts"></div>
+  <div class="cb-inp-wrap" id="cbInpWrap" style="display:none">
+    <input class="cb-inp" id="cbInp" placeholder="Escribe aquí..." onkeydown="if(event.key==='Enter')sendMsg()">
+    <button class="cb-send" onclick="sendMsg()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+    </button>
   </div>
-  <div class="cbfoot2">POWERED BY WHITEMOON · WHITEMOON.ES</div>
 </div>
 
 <script>
-// Cursor
-const cur = document.getElementById('cur');
-document.addEventListener('mousemove', e => { cur.style.left=e.clientX+'px'; cur.style.top=e.clientY+'px'; });
-
-// Nav scroll
-window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('s', window.scrollY>60));
-
-// Rotatorio
-const words = ['el fade','la barba','el corte','el estilo','el acabado'];
-let ri = 0;
-setInterval(() => {
-  const el = document.getElementById('rotor'); if(!el) return;
-  el.style.opacity='0';
-  setTimeout(() => { ri=(ri+1)%words.length; el.textContent=words[ri]; el.style.opacity='1'; }, 300);
-}, 2200);
-
-// Reveal
-const obs = new IntersectionObserver(entries => entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('vis'); }), {threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-// Hero fallback
-window.addEventListener('load', () => {
-  const v=document.getElementById('bgVid');
-  if(v) v.addEventListener('error', ()=>document.getElementById('heroBg').classList.add('fallback'));
-  else document.getElementById('heroBg').classList.add('fallback');
+// PRELOADER
+window.addEventListener('load',function(){
+  setTimeout(function(){
+    document.getElementById('preloader').classList.add('hide');
+  },900);
 });
 
-setTimeout(()=>{ const t=document.getElementById('cbtip'); if(t) t.style.opacity='0'; }, 6000);
+// NAV MOBILE
+function toggleMenu(){
+  document.getElementById('navMob').classList.toggle('open');
+}
 
-// ══════════════════════════════════════
-// HORARIOS reales Rodrigo Peluqueros
-// 0=Dom,1=Lun,2=Mar,3=Mié,4=Jue,5=Vie,6=Sáb
-const HORARIO = {
-  0: null,
-  1: ['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','16:30','17:00','17:30','18:00','18:30','19:00','19:30'],
-  2: ['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','16:30','17:00','17:30','18:00','18:30','19:00','19:30'],
-  3: ['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','16:30','17:00','17:30','18:00','18:30','19:00','19:30'],
-  4: ['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','16:30','17:00','17:30','18:00','18:30','19:00','19:30'],
-  5: ['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','16:30','17:00','17:30','18:00','18:30','19:00','19:30'],
-  6: ['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30'],
-};
-const DIAS_ES = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
-const MESES_ES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+// HERO WORDS
+(function(){
+  var words=['DEFINE.','DISTINGUE.','IDENTIFICA.','ELEVA.'];
+  var el=document.getElementById('heroWord');
+  if(!el)return;
+  var i=0;
+  el.style.transition='transform .4s cubic-bezier(.76,0,.24,1), opacity .4s ease';
+  setInterval(function(){
+    el.style.transform='translateY(-100%)';el.style.opacity='0';
+    setTimeout(function(){
+      i=(i+1)%words.length;
+      el.textContent=words[i];
+      el.style.transition='none';
+      el.style.transform='translateY(100%)';el.style.opacity='0';
+      setTimeout(function(){
+        el.style.transition='transform .4s cubic-bezier(.76,0,.24,1), opacity .4s ease';
+        el.style.transform='translateY(0)';el.style.opacity='1';
+      },30);
+    },400);
+  },2800);
+})();
 
-// Estado chatbot
-let greeted=false, estado='inicio', nombre='', servicio='', fechaSeleccionada='', horaSeleccionada='';
-let calYear, calMonth;
+// CHAT STATE
+var CS={step:0,barbero:'',servicio:'',dia:'',hora:'',nombre:'',telefono:''};
+
+var SVCS=[
+  {n:'Corte',t:'30 min',p:'15€'},
+  {n:'Corte + Barba',t:'45 min',p:'22€'},
+  {n:'Ritual de Barba',t:'30 min',p:'17€'},
+  {n:'Arreglo de Barba',t:'20 min',p:'10€'},
+  {n:'Corte + Cejas',t:'30 min',p:'17€'},
+  {n:'Corte Jubilado',t:'20 min',p:'12€'},
+  {n:'Color Global',t:'240 min',p:'A consultar'},
+  {n:'Mechas',t:'180 min',p:'A consultar'}
+];
+var DIAS=['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
+var HORAS_LAB=['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30'];
+var HORAS_FIN=['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30'];
 
 function openChat(){
-  document.getElementById('cbmod').classList.add('open');
-  document.getElementById('cbfab').style.display='none';
-  document.getElementById('cbtip').style.display='none';
-  if(!greeted){
-    greeted=true;
-    setTimeout(()=>{
-      botSay('¡Hola! Soy BLADE, el asistente de Rodrigo Peluqueros.\n¿En qué puedo ayudarte hoy?');
-      mostrarQuicks();
-    },300);
-  }
-  setTimeout(()=>document.getElementById('cbinput').focus(),400);
+  CS={step:0,barbero:'',servicio:'',dia:'',hora:'',nombre:'',telefono:''};
+  document.getElementById('cbModal').classList.add('open');
+  document.getElementById('cbMsgs').innerHTML='';
+  document.getElementById('cbOpts').innerHTML='';
+  document.getElementById('cbInpWrap').style.display='none';
+  setTimeout(startChat,200);
 }
-function openChatSrv(srv,precio){
-  openChat();
-  setTimeout(()=>{
-    servicio=srv;
-    botSay(`¡Buena elección! ${srv} — ${precio}€, incluye lavado y productos.\n¿Te busco hueco en el calendario?`);
-    setTimeout(()=>mostrarCalendario(),400);
-    estado='calendario';
-  },500);
+
+function openChatBarbero(b){
+  CS={step:1,barbero:b,servicio:'',dia:'',hora:'',nombre:'',telefono:''};
+  document.getElementById('cbModal').classList.add('open');
+  document.getElementById('cbMsgs').innerHTML='';
+  document.getElementById('cbOpts').innerHTML='';
+  document.getElementById('cbInpWrap').style.display='none';
+  setTimeout(function(){
+    addMsg('bot','Hola! Voy a ayudarte a reservar con '+b+'. ¿Qué servicio necesitas?');
+    showOpts(SVCS.map(function(s){return s.n+' — '+s.p;}));
+  },200);
 }
+
 function closeChat(){
-  document.getElementById('cbmod').classList.remove('open');
-  document.getElementById('cbfab').style.display='flex';
+  document.getElementById('cbModal').classList.remove('open');
 }
 
-function addMsg(txt,who){
-  const b=document.getElementById('cbbody');
-  const m=document.createElement('div'); m.className=`m ${who}`;
-  const bub=document.createElement('div'); bub.className='bub'; bub.textContent=txt;
-  m.appendChild(bub); b.appendChild(m); b.scrollTop=b.scrollHeight;
+function startChat(){
+  addMsg('bot','Hola! Bienvenido a Barbers Club. ¿Con quién quieres reservar?');
+  showOpts(['Thiago','Kimbo','El primero disponible']);
 }
-function botSay(txt){ addMsg(txt,'bot'); }
 
-function mostrarQuicks(){
-  const b=document.getElementById('cbbody');
-  const q=document.createElement('div'); q.className='qk'; q.id='quicks';
-  [['✂ Corte masculino','13€'],['🪒 Corte + barba','17€'],['👦 Corte niños','12€'],['📅 Ver horarios','']].forEach(([label,pr],i)=>{
-    const msgs=['Quiero un corte masculino','Quiero corte y barba','Quiero un corte para mi hijo','¿Cuándo tenéis hueco?'];
-    const btn=document.createElement('button');
-    btn.innerHTML=`<span>${label}</span>${pr?`<span class="pr">${pr}</span>`:''}`;
-    btn.onclick=()=>{ q.remove(); sendMsgText(msgs[i]); };
-    q.appendChild(btn);
+function addMsg(type,text){
+  var c=document.getElementById('cbMsgs');
+  var d=document.createElement('div');
+  d.className='msg msg-'+type;d.textContent=text;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
+}
+
+function showTyping(){
+  var c=document.getElementById('cbMsgs');
+  var d=document.createElement('div');
+  d.className='msg msg-bot msg-typing';d.id='typing';
+  d.innerHTML='<span></span><span></span><span></span>';
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
+}
+
+function removeTyping(){var t=document.getElementById('typing');if(t)t.remove();}
+
+function showOpts(opts){
+  var c=document.getElementById('cbOpts');c.innerHTML='';
+  opts.forEach(function(o){
+    var b=document.createElement('button');
+    b.className='cb-opt';b.textContent=o;
+    b.onclick=function(){handleOpt(o);};
+    c.appendChild(b);
   });
-  b.appendChild(q); b.scrollTop=b.scrollHeight;
+  document.getElementById('cbInpWrap').style.display='none';
 }
 
-function mostrarCalendario(){
-  const b=document.getElementById('cbbody');
-  const now=new Date();
-  calYear=now.getFullYear(); calMonth=now.getMonth();
-  b.appendChild(buildCalendar(calYear,calMonth));
-  b.scrollTop=b.scrollHeight;
+function showInput(ph){
+  document.getElementById('cbOpts').innerHTML='';
+  var w=document.getElementById('cbInpWrap');w.style.display='flex';
+  var i=document.getElementById('cbInp');i.placeholder=ph||'Escribe aquí...';i.value='';
+  setTimeout(function(){i.focus();},100);
 }
 
-function buildCalendar(year,month){
-  const old=document.getElementById('calWidget'); if(old) old.remove();
-  const wrap=document.createElement('div'); wrap.id='calWidget'; wrap.className='cal';
-  // header
-  const h=document.createElement('div'); h.className='cal-h';
-  const prev=document.createElement('button'); prev.textContent='‹';
-  const now=new Date(); now.setHours(0,0,0,0);
-  prev.disabled=(year===now.getFullYear()&&month===now.getMonth());
-  prev.onclick=()=>{ calMonth--; if(calMonth<0){calMonth=11;calYear--;} rebuildCal(); };
-  const title=document.createElement('b'); title.textContent=`${MESES_ES[month]} ${year}`;
-  const next=document.createElement('button'); next.textContent='›';
-  next.onclick=()=>{ calMonth++; if(calMonth>11){calMonth=0;calYear++;} rebuildCal(); };
-  h.appendChild(prev); h.appendChild(title); h.appendChild(next); wrap.appendChild(h);
-  // grid
-  const g=document.createElement('div'); g.className='cal-grid';
-  DIAS_ES.forEach(d=>{ const wd=document.createElement('div'); wd.className='wd'; wd.textContent=d; g.appendChild(wd); });
-  const first=new Date(year,month,1).getDay();
-  const days=new Date(year,month+1,0).getDate();
-  for(let i=0;i<first;i++){ const e=document.createElement('button'); e.className='dy off'; e.textContent=''; g.appendChild(e); }
-  for(let d=1;d<=days;d++){
-    const date=new Date(year,month,d); date.setHours(0,0,0,0);
-    const dow=date.getDay();
-    const btn=document.createElement('button'); btn.className='dy'; btn.textContent=d;
-    if(date<now||!HORARIO[dow]){ btn.disabled=true; }
-    else {
-      btn.onclick=()=>{
-        document.querySelectorAll('.cal-grid .dy.sel').forEach(el=>el.classList.remove('sel'));
-        btn.classList.add('sel');
-        const ds=`${DIAS_ES[dow]} ${d} de ${MESES_ES[month]}`;
-        fechaSeleccionada=ds;
-        mostrarHoras(dow,ds);
-      };
-    }
-    g.appendChild(btn);
-  }
-  wrap.appendChild(g); return wrap;
-}
-
-function rebuildCal(){
-  const b=document.getElementById('cbbody');
-  const old=document.getElementById('calWidget'); if(old) old.remove();
-  const oldH=document.getElementById('horasWidget'); if(oldH) oldH.remove();
-  b.appendChild(buildCalendar(calYear,calMonth));
-  b.scrollTop=b.scrollHeight;
-}
-
-function mostrarHoras(dow,dstr){
-  const b=document.getElementById('cbbody');
-  const oldH=document.getElementById('horasWidget'); if(oldH) oldH.remove();
-  const slots=HORARIO[dow]||[];
-  const wrap=document.createElement('div'); wrap.id='horasWidget'; wrap.className='hours';
-  slots.forEach(h=>{
-    const btn=document.createElement('button'); btn.textContent=h;
-    btn.onclick=()=>{
-      horaSeleccionada=h;
-      const oldCal=document.getElementById('calWidget'); if(oldCal) oldCal.remove();
-      const oldHrs=document.getElementById('horasWidget'); if(oldHrs) oldHrs.remove();
-      botSay(`📅 ${dstr} a las ${h}\n¿Cómo te llamas para confirmar la cita?`);
-      estado='esperando_nombre';
-      setTimeout(()=>document.getElementById('cbinput').focus(),300);
-    };
-    wrap.appendChild(btn);
-  });
-  b.appendChild(wrap); b.scrollTop=b.scrollHeight;
-}
-
-function procesarMensaje(t){
-  const q=document.getElementById('quicks'); if(q) q.remove();
-  const txt=t.toLowerCase();
-
-  if(estado==='esperando_nombre'){
-    nombre=t; estado='esperando_telefono';
-    return `Encantado, ${nombre} 👋\n¿Y tu número de teléfono para confirmarte?`;
-  }
-  if(estado==='esperando_telefono'){
-    const tel=t; estado='fin';
-    const srv=servicio||'cita';
-    const msg=`Nueva cita Rodrigo Peluqueros:\n✂ Servicio: ${srv}\n📅 ${fechaSeleccionada} a las ${horaSeleccionada}\n👤 ${nombre}\n📞 ${tel}`;
-    setTimeout(()=>{ window.open(`https://wa.me/34687813295?text=${encodeURIComponent(msg)}`,'_blank'); },800);
-    return `¡Perfecto, ${nombre}! 🎉\n${srv} — ${fechaSeleccionada} a las ${horaSeleccionada}.\n\nTe confirmo por WhatsApp ahora mismo. ¡Hasta pronto!`;
-  }
-  if(estado==='calendario') return '';
-
-  if(txt.includes('fade')||txt.includes('degradado')){ servicio='Corte fade'; estado='calendario'; setTimeout(()=>mostrarCalendario(),300); return 'Corte fade — 13€ con lavado incluido. ¿Qué día te viene bien?'; }
-  if(txt.includes('barba')||txt.includes('afeitado')){ servicio='Arreglo de barba'; estado='calendario'; setTimeout(()=>mostrarCalendario(),300); return 'Arreglo de barba 11€ · Afeitado navaja 12€ · Corte+barba 17€.\nElige un día:'; }
-  if(txt.includes('niño')||txt.includes('niños')||txt.includes('bebé')||txt.includes('bebe')||txt.includes('hijo')){ servicio='Corte niños'; estado='calendario'; setTimeout(()=>mostrarCalendario(),300); return 'Corte niños 12€ · Corte bebés 10€, con toda la paciencia del mundo.\nElige un día:'; }
-  if(txt.includes('color')||txt.includes('reflejo')||txt.includes('desriz')){ servicio='Color'; estado='calendario'; setTimeout(()=>mostrarCalendario(),300); return 'Color completo 22€ con lavado incluido. ¿Qué día prefieres?'; }
-  if(txt.includes('precio')||txt.includes('tarifa')||txt.includes('cuánto')||txt.includes('cuanto')) return 'Nuestras tarifas:\n• Corte masculino — 13€\n• Corte + barba — 17€\n• Arreglo barba — 11€\n• Afeitado navaja — 12€\n• Corte niños — 12€\n• Corte bebés — 10€\n• Fade — 13€\n• Color — 22€\nTodo incluye lavado y productos.';
-  if(txt.includes('horario')||txt.includes('abierto')||txt.includes('hora')) return 'Horario:\nLun–Vie: 10:00–14:00 / 16:30–20:00\nSábado: 10:00–14:00\nDomingo: Cerrado';
-  if(txt.includes('dónde')||txt.includes('donde')||txt.includes('dirección')||txt.includes('ubicacion')) return 'Estamos en Calle Iglesia, 3 Local 2, 28220 Majadahonda.\n¿Quieres reservar cita?';
-  if(txt.includes('cita')||txt.includes('reserva')||txt.includes('hueco')||txt.includes('disponible')||txt.includes('cuando')||txt.includes('cuándo')){ estado='calendario'; setTimeout(()=>mostrarCalendario(),300); return '¡Claro! ¿Qué día te viene mejor?'; }
-  if(txt.includes('hola')||txt.includes('buenos')||txt.includes('buenas')) return '¡Hola! Soy BLADE. ¿Te corto el pelo, la barba, o vienes con los peques? 😄';
-
-  servicio='Cita';
-  estado='calendario';
-  setTimeout(()=>mostrarCalendario(),300);
-  return 'Puedo buscarte hueco ahora mismo.\n¿Qué día te viene mejor?';
-}
-
-function sendMsgText(txt){
-  addMsg(txt,'usr');
-  setTimeout(()=>{ const r=procesarMensaje(txt); if(r) botSay(r); },420);
-}
 function sendMsg(){
-  const inp=document.getElementById('cbinput');
-  const txt=inp.value.trim(); if(!txt) return;
-  inp.value=''; sendMsgText(txt);
+  var v=document.getElementById('cbInp').value.trim();
+  if(!v)return;
+  addMsg('user',v);
+  document.getElementById('cbInp').value='';
+  handleInput(v);
+}
+
+function handleOpt(opt){
+  addMsg('user',opt);
+  document.getElementById('cbOpts').innerHTML='';
+  showTyping();
+  setTimeout(function(){removeTyping();processStep(opt);},600);
+}
+
+function handleInput(val){
+  showTyping();
+  setTimeout(function(){removeTyping();processStep(val);},600);
+}
+
+function processStep(val){
+  if(CS.step===0){
+    CS.barbero=(val==='El primero disponible'?'cualquier barbero':val);
+    CS.step=1;
+    addMsg('bot','Perfecto. ¿Qué servicio necesitas?');
+    showOpts(SVCS.map(function(s){return s.n+' — '+s.p;}));
+  } else if(CS.step===1){
+    CS.servicio=val.split(' — ')[0];
+    CS.step=2;
+    addMsg('bot','¿Qué día prefieres?');
+    showOpts(DIAS);
+  } else if(CS.step===2){
+    CS.dia=val;
+    CS.step=3;
+    var horas=(CS.dia==='Sábado'||CS.dia==='Domingo')?HORAS_FIN:HORAS_LAB;
+    addMsg('bot','¿A qué hora?');
+    showOpts(horas);
+  } else if(CS.step===3){
+    CS.hora=val;
+    CS.step=4;
+    addMsg('bot','¿Cuál es tu nombre?');
+    showInput('Tu nombre...');
+  } else if(CS.step===4){
+    CS.nombre=val;
+    CS.step=5;
+    addMsg('bot','Y tu teléfono para confirmar la cita.');
+    showInput('Tu teléfono...');
+  } else if(CS.step===5){
+    CS.telefono=val;
+    CS.step=6;
+    enviarLead();
+  }
+}
+
+function enviarLead(){
+  addMsg('bot','Tu cita: '+CS.barbero+' · '+CS.servicio+' · '+CS.dia+' a las '+CS.hora+'.');
+  showTyping();
+  fetch('https://mlaqtniujnvfxcvcourm.supabase.co/functions/v1/barberias-notify',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({nombre:CS.nombre,telefono:CS.telefono,barbero:CS.barbero,servicio:CS.servicio,dia:CS.dia,hora:CS.hora})
+  }).catch(function(){});
+  setTimeout(function(){
+    removeTyping();
+    addMsg('bot','¡Reserva recibida! Te llamamos al '+CS.telefono+' para confirmar. Nos vemos el '+CS.dia+' a las '+CS.hora+'. Barbers Club.');
+    document.getElementById('cbOpts').innerHTML='';
+    document.getElementById('cbInpWrap').style.display='none';
+  },900);
 }
 </script>
 </body>
