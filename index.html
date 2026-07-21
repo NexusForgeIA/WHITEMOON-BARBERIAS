@@ -520,6 +520,17 @@ const MESES_ES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agos
 
 // Estado chatbot
 let greeted=false, estado='inicio', nombre='', servicio='', fechaSeleccionada='', horaSeleccionada='';
+
+/* Aviso de citas: Edge Function pública (guarda en leads_web + avisa por Telegram).
+   Sin claves en el cliente; nunca interrumpe la conversación. */
+const NOTIFY_URL='https://mlaqtniujnvfxcvcourm.supabase.co/functions/v1/barberias-notify';
+function enviarLead(tel, srv){
+  try{
+    fetch(NOTIFY_URL,{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({nombre:nombre,telefono:tel,barbero:'',servicio:srv,dia:fechaSeleccionada,hora:horaSeleccionada})
+    }).catch(()=>{});
+  }catch(e){}
+}
 let calYear, calMonth;
 
 function openChat(){
@@ -655,9 +666,8 @@ function procesarMensaje(t){
   if(estado==='esperando_telefono'){
     const tel=t; estado='fin';
     const srv=servicio||'cita';
-    const msg=`Nueva cita Rodrigo Peluqueros:\n✂ Servicio: ${srv}\n📅 ${fechaSeleccionada} a las ${horaSeleccionada}\n👤 ${nombre}\n📞 ${tel}`;
-    setTimeout(()=>{ window.open(`https://wa.me/34687813295?text=${encodeURIComponent(msg)}`,'_blank'); },800);
-    return `¡Perfecto, ${nombre}! 🎉\n${srv} — ${fechaSeleccionada} a las ${horaSeleccionada}.\n\nTe confirmo por WhatsApp ahora mismo. ¡Hasta pronto!`;
+    enviarLead(tel, srv);
+    return `¡Perfecto, ${nombre}! 🎉\n${srv} — ${fechaSeleccionada} a las ${horaSeleccionada}.\n\nTe llamamos para confirmarte la cita. ¡Hasta pronto!`;
   }
   if(estado==='calendario') return '';
 
