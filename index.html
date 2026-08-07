@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Barbers Club | Barbería Premium · Reserva Online</title>
-<meta name="description" content="Barbers Club — corte, barba y ritual premium en Madrid. Reserva online con Thiago o Kimbo. Sin esperas. Presupuesto en el momento.">
+<meta name="description" content="Barbers Club — corte, barba y ritual premium en Madrid. Reserva online con Thiago, Kimbo o Rodrigo. Sin esperas. Presupuesto en el momento.">
 <link rel="canonical" href="https://nexusforgeia.github.io/WHITEMOON-BARBERIAS/">
 <meta property="og:title" content="Barbers Club | Barbería Premium">
-<meta property="og:description" content="Reserva online con Thiago o Kimbo. Sin esperas.">
+<meta property="og:description" content="Reserva online con Thiago, Kimbo o Rodrigo. Sin esperas.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpgphoto-1503951914875-452162b0f3f1?fm=jpg&q=80&w=1200q=80photo-1503951914875-452162b0f3f1?fm=jpg&q=80&w=1200w=1200&auto=format&fit=crop">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -95,11 +95,11 @@ section{padding:96px 48px}
 
 /* DEMO STRIP */
 .demo-strip{background:var(--black2);padding:0 48px 96px}
-.demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.demo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
 .demo-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer}
 .demo-card img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:filter .4s,transform .4s}
 .demo-card:hover img{filter:grayscale(0%);transform:scale(1.04)}
-.demo-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,transparent 50%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px 20px}
+.demo-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.6) 34%,transparent 62%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px 20px}
 .demo-card-name{font-family:'Anton',sans-serif;font-size:1.6rem;letter-spacing:.02em}
 .demo-card-role{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px}
 .demo-card-services{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
@@ -204,6 +204,7 @@ footer p{font-size:.65rem;color:var(--muted)}
 footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
 
 /* RESPONSIVE */
+@media(max-width:1200px){.demo-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){
   .nav{padding:16px 20px}
   .nav-links{display:none}
@@ -282,7 +283,7 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
     </span>
   </h1>
 
-  <p class="hero-sub">Elige a Thiago o Kimbo. Reserva en 2 minutos. Sin llamadas, sin esperas. Tu barbero listo cuando tú llegues.</p>
+  <p class="hero-sub">Elige a Thiago, Kimbo o Rodrigo. Reserva en 2 minutos. Sin llamadas, sin esperas. Tu barbero listo cuando tú llegues.</p>
 
   <div class="hero-actions">
     <button class="btn-wh" onclick="openChat()">Reservar ahora</button>
@@ -299,6 +300,7 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
     <span class="marquee-item">Barba</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Thiago</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Kimbo</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Rodrigo</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Sin Esperas</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Reserva Online</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Ritual Barba</span><span class="marquee-sep">✦</span>
@@ -308,6 +310,7 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
     <span class="marquee-item">Barba</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Thiago</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Kimbo</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Rodrigo</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Sin Esperas</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Reserva Online</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Ritual Barba</span><span class="marquee-sep">✦</span>
@@ -349,6 +352,20 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
           <div class="demo-card-service"><span>Ritual de Barba</span><span>17 €</span></div>
         </div>
         <span class="demo-card-cta">Reservar con Kimbo →</span>
+      </div>
+    </div>
+    <!-- RODRIGO -->
+    <div class="demo-card" onclick="openChatBarbero('Rodrigo')">
+      <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Rodrigo barbero" width="600" height="800" loading="lazy">
+      <div class="demo-card-overlay">
+        <div class="demo-card-role">Barbero Senior</div>
+        <div class="demo-card-name">RODRIGO</div>
+        <div class="demo-card-services">
+          <div class="demo-card-service"><span>Corte</span><span>15 €</span></div>
+          <div class="demo-card-service"><span>Corte + Barba</span><span>22 €</span></div>
+          <div class="demo-card-service"><span>Ritual de Barba</span><span>17 €</span></div>
+        </div>
+        <span class="demo-card-cta">Reservar con Rodrigo →</span>
       </div>
     </div>
     <!-- CUALQUIERA -->
@@ -458,7 +475,7 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
         <div class="hor-card-text">Elige barbero, servicio y horario en menos de 2 minutos. Sin llamadas, sin esperas.</div>
       </div>
       <div class="hor-card">
-        <div class="hor-card-title">Thiago y Kimbo</div>
+        <div class="hor-card-title">Thiago, Kimbo y Rodrigo</div>
         <div class="hor-card-text">Cada barbero gestiona su propia agenda. Reserva directamente con el que prefieras o con el primero disponible.</div>
       </div>
       <div class="hor-card">
@@ -621,7 +638,7 @@ function closeChat(){
 
 function startChat(){
   addMsg('bot','Hola! Bienvenido a Barbers Club. ¿Con quién quieres reservar?');
-  showOpts(['Thiago','Kimbo','El primero disponible']);
+  showOpts(['Thiago','Kimbo','Rodrigo','El primero disponible']);
 }
 
 function addMsg(type,text){
