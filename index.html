@@ -49,6 +49,7 @@ body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);o
 .nav-cta:hover{opacity:.85}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .nav-hamburger span{display:block;width:22px;height:2px;background:var(--white);transition:all .3s}
+.nav-mob{display:none}
 
 /* HERO */
 .hero{height:100dvh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:100px 48px 72px;overflow:hidden}
@@ -89,7 +90,7 @@ body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);o
 
 /* SECTION */
 section{padding:96px 48px}
-.sec-tag{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sec-tag{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.47);margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .sec-tag::before{content:'';display:block;width:20px;height:1px;background:rgba(255,255,255,.3)}
 .sec-title{font-family:'Anton',sans-serif;font-size:clamp(2rem,5vw,4.5rem);line-height:.95;letter-spacing:-.01em;margin-bottom:8px}
 .sec-title em{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:.85em;color:rgba(255,255,255,.5)}
@@ -122,8 +123,9 @@ section{padding:96px 48px}
 .serv-card{background:var(--black2);padding:32px 24px;transition:background .2s}
 .serv-card:hover{background:#161616}
 .serv-n{font-family:'Anton',sans-serif;font-size:3rem;color:rgba(255,255,255,.05);line-height:1;margin-bottom:16px}
+.serv-n::before{content:attr(data-n)}
 .serv-name{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
-.serv-time{font-size:.68rem;color:var(--muted);margin-bottom:14px}
+.serv-time{font-size:.68rem;color:#7d7d7d;margin-bottom:14px}
 .serv-price{font-family:'Anton',sans-serif;font-size:1.6rem}
 
 /* HORARIOS */
@@ -136,7 +138,7 @@ section{padding:96px 48px}
 .hor-hora{font-size:.75rem;font-weight:400}
 .hor-info{display:flex;flex-direction:column;gap:20px}
 .hor-card{background:var(--black3);border:1px solid var(--border2);padding:24px;border-radius:2px}
-.hor-card-title{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px}
+.hor-card-title{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.47);margin-bottom:8px}
 .hor-card-text{font-size:.82rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.7}
 
 /* FAB */
@@ -179,7 +181,7 @@ section{padding:96px 48px}
 /* RESEÑAS */
 .resenas{background:var(--black2);padding:96px 48px}
 .resenas-stars{font-size:1.4rem;color:#fff;margin:20px 0 40px;display:flex;align-items:center;gap:10px}
-.resenas-stars span{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.resenas-stars span{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.47)}
 .resenas-track-wrap{overflow:hidden;position:relative;margin:0 -48px;padding:0 48px}
 .resenas-track-wrap::before,.resenas-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
 .resenas-track-wrap::before{left:0;background:linear-gradient(90deg,var(--black2),transparent)}
@@ -191,18 +193,18 @@ section{padding:96px 48px}
 .res-card:hover{border-color:rgba(255,255,255,.2)}
 .res-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .res-name{font-size:.82rem;font-weight:600}
-.res-date{font-size:.65rem;color:rgba(255,255,255,.35)}
+.res-date{font-size:.65rem;color:rgba(255,255,255,.47)}
 .res-stars{font-size:.9rem;color:#fff;margin-bottom:6px;letter-spacing:2px}
-.res-serv{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:12px}
+.res-serv{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.47);margin-bottom:12px}
 .res-text{font-size:.8rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.6}
 @media(max-width:900px){.resenas{padding:64px 20px}.resenas-track-wrap{margin:0 -20px;padding:0 20px}}
 
 /* FOOTER */
 footer{background:#000;border-top:1px solid var(--border2);padding:40px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.ft-logo .italic{font-family:Georgia,serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.45)}
-.ft-logo .sans{font-family:'Anton',sans-serif;font-size:.95rem;color:rgba(255,255,255,.45);letter-spacing:.06em}
+.ft-logo .italic{font-family:Georgia,serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.48)}
+.ft-logo .sans{font-family:'Anton',sans-serif;font-size:.95rem;color:rgba(255,255,255,.48);letter-spacing:.06em}
 footer p{font-size:.65rem;color:var(--muted)}
-footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
+footer a{color:rgba(255,255,255,.48);text-decoration:none;font-size:.65rem}
 
 /* RESPONSIVE */
 @media(max-width:1200px){.demo-grid{grid-template-columns:repeat(2,1fr)}}
@@ -409,49 +411,49 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
   <div class="sec-title">SERVICIOS</div>
   <div class="servicios-grid">
     <div class="serv-card">
-      <div class="serv-n">01</div>
+      <div class="serv-n" data-n="01" aria-hidden="true"></div>
       <div class="serv-name">Corte</div>
       <div class="serv-time">30 min</div>
       <div class="serv-price">15€</div>
     </div>
     <div class="serv-card">
-      <div class="serv-n">02</div>
+      <div class="serv-n" data-n="02" aria-hidden="true"></div>
       <div class="serv-name">Corte + Barba</div>
       <div class="serv-time">45 min</div>
       <div class="serv-price">22€</div>
     </div>
     <div class="serv-card">
-      <div class="serv-n">03</div>
+      <div class="serv-n" data-n="03" aria-hidden="true"></div>
       <div class="serv-name">Ritual de Barba</div>
       <div class="serv-time">30 min</div>
       <div class="serv-price">17€</div>
     </div>
     <div class="serv-card">
-      <div class="serv-n">04</div>
+      <div class="serv-n" data-n="04" aria-hidden="true"></div>
       <div class="serv-name">Arreglo Barba</div>
       <div class="serv-time">20 min</div>
       <div class="serv-price">10€</div>
     </div>
     <div class="serv-card">
-      <div class="serv-n">05</div>
+      <div class="serv-n" data-n="05" aria-hidden="true"></div>
       <div class="serv-name">Corte + Cejas</div>
       <div class="serv-time">30 min</div>
       <div class="serv-price">17€</div>
     </div>
     <div class="serv-card">
-      <div class="serv-n">06</div>
+      <div class="serv-n" data-n="06" aria-hidden="true"></div>
       <div class="serv-name">Corte Jubilado</div>
       <div class="serv-time">20 min</div>
       <div class="serv-price">12€</div>
     </div>
     <div class="serv-card">
-      <div class="serv-n">07</div>
+      <div class="serv-n" data-n="07" aria-hidden="true"></div>
       <div class="serv-name">Color Global</div>
       <div class="serv-time">240 min</div>
       <div class="serv-price" style="font-size:1.1rem;margin-top:6px">A consultar</div>
     </div>
     <div class="serv-card">
-      <div class="serv-n">08</div>
+      <div class="serv-n" data-n="08" aria-hidden="true"></div>
       <div class="serv-name">Mechas</div>
       <div class="serv-time">180 min</div>
       <div class="serv-price" style="font-size:1.1rem;margin-top:6px">A consultar</div>
