@@ -3,17 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Barbers Club | Barbería Premium · Reserva Online</title>
-<meta name="description" content="Barbers Club — corte, barba y ritual premium en Madrid. Reserva online con Thiago, Kimbo o Rodrigo. Sin esperas. Presupuesto en el momento.">
+<title>Rodrigo Peluqueros · Barbería en Majadahonda</title>
+<!-- DEMO de presentación de WhiteMoon: no debe indexarse ni competir con rodrigopeluqueros.com -->
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Rodrigo Peluqueros, barbería en Majadahonda. Corte de caballero, barba, afeitado, fade, infantil y color. Pide cita por chat o llámanos.">
 <link rel="canonical" href="https://nexusforgeia.github.io/WHITEMOON-BARBERIAS/">
-<meta property="og:title" content="Barbers Club | Barbería Premium">
-<meta property="og:description" content="Reserva online con Thiago, Kimbo o Rodrigo. Sin esperas.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpgphoto-1503951914875-452162b0f3f1?fm=jpg&q=80&w=1200q=80photo-1503951914875-452162b0f3f1?fm=jpg&q=80&w=1200w=1200&auto=format&fit=crop">
+<meta property="og:title" content="Rodrigo Peluqueros · Barbería en Majadahonda">
+<meta property="og:description" content="Estilistas con larga trayectoria. Te asesoramos el look que más te favorece.">
+<meta property="og:url" content="https://nexusforgeia.github.io/WHITEMOON-BARBERIAS/">
+<meta property="og:image" content="https://nexusforgeia.github.io/WHITEMOON-BARBERIAS/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Rodrigo Peluqueros",
+  "description": "Barbería en Majadahonda. Estilistas con larga trayectoria: corte de caballero, barba, afeitado, cortes fade, infantiles y color.",
+  "url": "https://nexusforgeia.github.io/WHITEMOON-BARBERIAS/",
+  "image": "https://nexusforgeia.github.io/WHITEMOON-BARBERIAS/assets/og.jpg",
+  "telephone": "+34912543968",
+  "email": "Cobacho1977@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Iglesia, 3, Local 2",
+    "addressLocality": "Majadahonda",
+    "postalCode": "28220",
+    "addressRegion": "Madrid",
+    "addressCountry": "ES"
+  },
+  "areaServed": "Majadahonda",
+  "sameAs": ["https://instagram.com/rodrigo.peluqueros"]
+}
+</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -33,7 +58,7 @@ body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);o
 /* PRELOADER */
 .preloader{position:fixed;inset:0;background:var(--black);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity .6s ease, visibility .6s ease}
 .preloader.hide{opacity:0;visibility:hidden}
-.preloader-logo{font-family:'Anton',sans-serif;font-size:3rem;letter-spacing:.08em;color:var(--white);animation:pulse 1.2s ease-in-out infinite}
+.preloader-logo{font-family:'Anton',sans-serif;font-size:clamp(1.6rem,7vw,3rem);letter-spacing:.08em;color:var(--white);animation:pulse 1.2s ease-in-out infinite;text-align:center;line-height:1.05}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
 /* NAV */
@@ -54,14 +79,14 @@ body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);o
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.6) 60%,rgba(0,0,0,.92) 100%)}
 
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid var(--border);padding:7px 14px;border-radius:2px;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:24px}
-.badge-dot{width:6px;height:6px;background:var(--white);border-radius:50%;animation:badgePulse 2s ease-in-out infinite}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid var(--border);padding:7px 14px;border-radius:2px;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:24px;position:relative;z-index:2;align-self:flex-start;max-width:100%}
+.badge-dot{width:6px;height:6px;background:var(--white);border-radius:50%;animation:badgePulse 2s ease-in-out infinite;flex-shrink:0}
 @keyframes badgePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
 
 .hero h1{font-family:'Anton',sans-serif;font-size:clamp(3.5rem,10vw,9rem);line-height:.92;letter-spacing:-.01em;margin-bottom:24px;position:relative;z-index:2}
 .hero h1 .line2{display:block;color:rgba(255,255,255,.45)}
 
-.hero-words{display:inline-block;overflow:hidden;vertical-align:bottom}
+.hero-words{display:inline-block;overflow:hidden;vertical-align:bottom;min-width:78px}
 .hero-word{display:block;transition:transform .4s cubic-bezier(.76,0,.24,1),opacity .4s ease;opacity:1}
 .hero-word.out{transform:translateY(-100%);opacity:0}
 .hero-word.in{transform:translateY(100%);opacity:0}
@@ -93,17 +118,15 @@ section{padding:96px 48px}
 .sec-title{font-family:'Anton',sans-serif;font-size:clamp(2rem,5vw,4.5rem);line-height:.95;letter-spacing:-.01em;margin-bottom:8px}
 .sec-title em{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:.85em;color:rgba(255,255,255,.5)}
 
-/* DEMO STRIP */
+/* DEMO STRIP (tarjetas-foto de servicio) */
 .demo-strip{background:var(--black2);padding:0 48px 96px}
-.demo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.demo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .demo-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer}
 .demo-card img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:filter .4s,transform .4s}
 .demo-card:hover img{filter:grayscale(0%);transform:scale(1.04)}
 .demo-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.6) 34%,transparent 62%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px 20px}
-.demo-card-name{font-family:'Anton',sans-serif;font-size:1.6rem;letter-spacing:.02em}
+.demo-card-name{font-family:'Anton',sans-serif;font-size:1.6rem;letter-spacing:.02em;line-height:1.05;margin-bottom:14px}
 .demo-card-role{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px}
-.demo-card-services{display:flex;flex-direction:column;gap:4px;margin-bottom:16px}
-.demo-card-service{font-size:.72rem;color:rgba(255,255,255,.7);display:flex;justify-content:space-between}
 .demo-card-cta{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white);border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px;display:inline-block;transition:border-color .2s}
 .demo-card:hover .demo-card-cta{border-color:var(--white)}
 
@@ -115,24 +138,26 @@ section{padding:96px 48px}
 .galeria-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:filter .4s,transform .4s}
 .galeria-img:hover img{filter:grayscale(0%);transform:scale(1.06)}
 
-/* SERVICIOS */
+/* SERVICIOS (carta completa) */
 .servicios{background:var(--black2)}
 .servicios-grid{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border2)}
-.serv-card{background:var(--black2);padding:32px 24px;transition:background .2s}
+.serv-card{background:var(--black2);padding:32px 24px;transition:background .2s;cursor:pointer}
 .serv-card:hover{background:#161616}
 .serv-n{font-family:'Anton',sans-serif;font-size:3rem;color:rgba(255,255,255,.05);line-height:1;margin-bottom:16px}
 .serv-name{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
-.serv-time{font-size:.68rem;color:var(--muted);margin-bottom:14px}
-.serv-price{font-family:'Anton',sans-serif;font-size:1.6rem}
+.serv-card .demo-card-cta{margin-top:14px;font-size:.6rem;color:rgba(255,255,255,.6)}
+.serv-card:hover .demo-card-cta{color:var(--white);border-color:var(--white)}
 
-/* HORARIOS */
+/* NOSOTROS / CONTACTO */
 .horarios{background:var(--black)}
 .horarios-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:56px;align-items:start}
 .hor-table{display:flex;flex-direction:column}
-.hor-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border2)}
+.hor-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border2);gap:14px;flex-wrap:wrap}
 .hor-row:first-child{border-top:1px solid var(--border2)}
 .hor-dia{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .hor-hora{font-size:.75rem;font-weight:400}
+.hor-hora a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);transition:border-color .2s}
+.hor-hora a:hover{border-color:var(--white)}
 .hor-info{display:flex;flex-direction:column;gap:20px}
 .hor-card{background:var(--black3);border:1px solid var(--border2);padding:24px;border-radius:2px}
 .hor-card-title{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px}
@@ -149,10 +174,10 @@ section{padding:96px 48px}
 .cb-modal.open{display:flex}
 .cb-head{background:#000;padding:18px 18px 14px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between}
 .cb-head-l{display:flex;align-items:center;gap:10px}
-.cb-av{width:36px;height:36px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:.9rem;color:#000}
+.cb-av{width:36px;height:36px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:.9rem;color:#000;flex-shrink:0}
 .cb-name{font-size:.82rem;font-weight:600}
 .cb-status{font-size:.62rem;color:rgba(255,255,255,.45);display:flex;align-items:center;gap:4px}
-.cb-status::before{content:'';width:5px;height:5px;background:#fff;border-radius:50%;display:block}
+.cb-status::before{content:'';width:5px;height:5px;background:#fff;border-radius:50%;display:block;flex-shrink:0}
 .cb-x{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.2rem;line-height:1}
 .cb-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;max-height:400px}
 .cb-msgs::-webkit-scrollbar{width:2px}
@@ -169,39 +194,18 @@ section{padding:96px 48px}
 .cb-opt{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:9px 12px;font-size:.74rem;color:var(--white);cursor:pointer;text-align:left;transition:all .2s;font-family:'Inter',sans-serif}
 .cb-opt:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2)}
 .cb-inp-wrap{padding:10px 14px;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:7px}
-.cb-inp{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:9px 12px;font-size:.76rem;color:var(--white);font-family:'Inter',sans-serif;outline:none}
+.cb-inp{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:9px 12px;font-size:.76rem;color:var(--white);font-family:'Inter',sans-serif;outline:none;min-width:0}
 .cb-inp::placeholder{color:var(--muted)}
 .cb-send{background:var(--white);border:none;border-radius:5px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
 .cb-send svg{width:13px;height:13px}
-
-
-/* RESEÑAS */
-.resenas{background:var(--black2);padding:96px 48px}
-.resenas-stars{font-size:1.4rem;color:#fff;margin:20px 0 40px;display:flex;align-items:center;gap:10px}
-.resenas-stars span{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.resenas-track-wrap{overflow:hidden;position:relative;margin:0 -48px;padding:0 48px}
-.resenas-track-wrap::before,.resenas-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
-.resenas-track-wrap::before{left:0;background:linear-gradient(90deg,var(--black2),transparent)}
-.resenas-track-wrap::after{right:0;background:linear-gradient(-90deg,var(--black2),transparent)}
-.resenas-track{display:flex;gap:16px;animation:scrollResenas 40s linear infinite;width:max-content}
-.resenas-track:hover{animation-play-state:paused}
-@keyframes scrollResenas{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.res-card{background:var(--black3);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:24px;width:280px;flex-shrink:0;transition:border-color .2s}
-.res-card:hover{border-color:rgba(255,255,255,.2)}
-.res-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.res-name{font-size:.82rem;font-weight:600}
-.res-date{font-size:.65rem;color:rgba(255,255,255,.35)}
-.res-stars{font-size:.9rem;color:#fff;margin-bottom:6px;letter-spacing:2px}
-.res-serv{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:12px}
-.res-text{font-size:.8rem;color:rgba(255,255,255,.65);font-weight:300;line-height:1.6}
-@media(max-width:900px){.resenas{padding:64px 20px}.resenas-track-wrap{margin:0 -20px;padding:0 20px}}
 
 /* FOOTER */
 footer{background:#000;border-top:1px solid var(--border2);padding:40px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .ft-logo .italic{font-family:Georgia,serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.45)}
 .ft-logo .sans{font-family:'Anton',sans-serif;font-size:.95rem;color:rgba(255,255,255,.45);letter-spacing:.06em}
-footer p{font-size:.65rem;color:var(--muted)}
+footer p{font-size:.65rem;color:var(--muted);line-height:2}
 footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
+footer a:hover{color:rgba(255,255,255,.7)}
 
 /* RESPONSIVE */
 @media(max-width:1200px){.demo-grid{grid-template-columns:repeat(2,1fr)}}
@@ -222,7 +226,8 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
   .cb-modal{width:calc(100vw - 24px);right:12px;bottom:84px}
 }
 @media(max-width:600px){
-  .hero h1{font-size:3.2rem}
+  .hero h1{font-size:clamp(2.3rem,11vw,3.2rem)}
+  .hero-badge{font-size:.55rem;letter-spacing:.14em}
   .servicios-grid{grid-template-columns:1fr}
   .galeria-grid{grid-template-columns:1fr 1fr}
 }
@@ -232,21 +237,21 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
 
 <!-- PRELOADER -->
 <div class="preloader" id="preloader">
-  <div class="preloader-logo">BARBERS CLUB</div>
+  <div class="preloader-logo">RODRIGO<br>PELUQUEROS</div>
 </div>
 
 <!-- NAV -->
 <nav class="nav">
   <a href="#top" class="nav-logo">
-    <span class="italic">barbers</span><span class="sans"> club</span>
+    <span class="italic">rodrigo</span><span class="sans"> peluqueros</span>
   </a>
   <div class="nav-links">
-    <a href="#barberos">Barberos</a>
     <a href="#servicios">Servicios</a>
     <a href="#galeria">Galería</a>
-    <a href="#horarios">Horarios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
   </div>
-  <a href="#" class="nav-cta" onclick="openChat();return false">Reservar</a>
+  <a href="#" class="nav-cta" onclick="openChat();return false">Pedir cita</a>
   <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
     <span></span><span></span><span></span>
   </button>
@@ -254,131 +259,116 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
 
 <!-- NAV MÓVIL -->
 <div class="nav-mob" id="navMob">
-  <a href="#barberos" onclick="toggleMenu()">Barberos</a>
   <a href="#servicios" onclick="toggleMenu()">Servicios</a>
   <a href="#galeria" onclick="toggleMenu()">Galería</a>
-  <a href="#horarios" onclick="toggleMenu()">Horarios</a>
-  <button class="btn-wh" onclick="openChat();toggleMenu()" style="margin-top:8px">Reservar cita</button>
+  <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
+  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+  <button class="btn-wh" onclick="openChat();toggleMenu()" style="margin-top:8px">Pedir cita</button>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="top">
   <video class="hero-video" autoplay muted loop playsinline preload="none"
-    poster="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpg&q=60&w=1200&auto=format&fit=crop">
+    poster="assets/img/hero-poster.jpg">
     <source src="assets/video/hero-barber.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
 
   <div class="hero-badge">
     <div class="badge-dot"></div>
-    Barbería Premium · Madrid · Reserva Online
+    Majadahonda ·
+    <span class="hero-words"><span class="hero-word" id="heroWord">Corte</span></span>
   </div>
 
   <h1>
-    EL CORTE<br>
-    <span class="line2">QUE TE
-    <span class="hero-words">
-      <span class="hero-word" id="heroWord">DEFINE.</span>
-    </span>
-    </span>
+    TU BARBERÍA<br>
+    <span class="line2">EN MAJADAHONDA.</span>
   </h1>
 
-  <p class="hero-sub">Elige a Thiago, Kimbo o Rodrigo. Reserva en 2 minutos. Sin llamadas, sin esperas. Tu barbero listo cuando tú llegues.</p>
+  <p class="hero-sub">Estilistas con larga trayectoria. Te asesoramos el look que más te favorece según tus rasgos y preferencias.</p>
 
   <div class="hero-actions">
-    <button class="btn-wh" onclick="openChat()">Reservar ahora</button>
-    <a href="#servicios" class="btn-out">Ver servicios</a>
+    <button class="btn-wh" onclick="openChat()">Pedir cita</button>
+    <a href="tel:+34912543968" class="btn-out">Llamar 912 543 968</a>
   </div>
-
 
 </section>
 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-inner">
-    <span class="marquee-item">Corte</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Corte de caballero</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Barba</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Thiago</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Kimbo</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Rodrigo</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Sin Esperas</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Reserva Online</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Ritual Barba</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Color & Mechas</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Madrid</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Corte</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Afeitado</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Fade</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Infantil y bebés</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Color y reflejos</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Desrizante</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Majadahonda</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Corte de caballero</span><span class="marquee-sep">✦</span>
     <span class="marquee-item">Barba</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Thiago</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Kimbo</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Rodrigo</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Sin Esperas</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Reserva Online</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Ritual Barba</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Color & Mechas</span><span class="marquee-sep">✦</span>
-    <span class="marquee-item">Madrid</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Afeitado</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Fade</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Infantil y bebés</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Color y reflejos</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Desrizante</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Majadahonda</span><span class="marquee-sep">✦</span>
   </div>
 </div>
 
-<!-- BARBEROS (demo strip) -->
-<div class="demo-strip" id="barberos">
+<!-- SERVICIOS (tarjetas-foto) -->
+<div class="demo-strip" id="servicios">
   <div style="padding-top:96px;margin-bottom:48px">
-    <div class="sec-tag">Nuestros barberos</div>
-    <div class="sec-title">ELIGE CON<br><em>quién quieres</em></div>
+    <div class="sec-tag">Lo que hacemos</div>
+    <div class="sec-title">SERVICIOS<br><em>de barbería</em></div>
   </div>
   <div class="demo-grid">
-    <!-- THIAGO -->
-    <div class="demo-card" onclick="openChatBarbero('Thiago')">
-      <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Thiago barbero" width="600" height="800" loading="lazy">
+    <div class="demo-card" onclick="openChatServicio('Corte caballero')">
+      <img src="assets/img/serv-corte.jpg" alt="Corte de caballero en barbería" width="600" height="800" loading="lazy">
       <div class="demo-card-overlay">
-        <div class="demo-card-role">Barbero Senior</div>
-        <div class="demo-card-name">THIAGO</div>
-        <div class="demo-card-services">
-          <div class="demo-card-service"><span>Corte</span><span>15 €</span></div>
-          <div class="demo-card-service"><span>Corte + Barba</span><span>22 €</span></div>
-          <div class="demo-card-service"><span>Ritual de Barba</span><span>17 €</span></div>
-        </div>
-        <span class="demo-card-cta">Reservar con Thiago →</span>
+        <div class="demo-card-role">Barbería</div>
+        <div class="demo-card-name">CORTE DE<br>CABALLERO</div>
+        <span class="demo-card-cta">Pedir cita →</span>
       </div>
     </div>
-    <!-- KIMBO -->
-    <div class="demo-card" onclick="openChatBarbero('Kimbo')">
-      <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Kimbo barbero" width="600" height="800" loading="lazy">
+    <div class="demo-card" onclick="openChatServicio('Corte + barba')">
+      <img src="assets/img/serv-barba.jpg" alt="Arreglo de barba con navaja" width="600" height="800" loading="lazy">
       <div class="demo-card-overlay">
-        <div class="demo-card-role">Barbero Senior</div>
-        <div class="demo-card-name">KIMBO</div>
-        <div class="demo-card-services">
-          <div class="demo-card-service"><span>Corte</span><span>15 €</span></div>
-          <div class="demo-card-service"><span>Corte + Barba</span><span>22 €</span></div>
-          <div class="demo-card-service"><span>Ritual de Barba</span><span>17 €</span></div>
-        </div>
-        <span class="demo-card-cta">Reservar con Kimbo →</span>
+        <div class="demo-card-role">Barba</div>
+        <div class="demo-card-name">CORTE Y<br>ARREGLO<br>DE BARBA</div>
+        <span class="demo-card-cta">Pedir cita →</span>
       </div>
     </div>
-    <!-- RODRIGO -->
-    <div class="demo-card" onclick="openChatBarbero('Rodrigo')">
-      <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Rodrigo barbero" width="600" height="800" loading="lazy">
+    <div class="demo-card" onclick="openChatServicio('Afeitado')">
+      <img src="assets/img/serv-afeitado.jpg" alt="Afeitado clásico a navaja" width="600" height="800" loading="lazy">
       <div class="demo-card-overlay">
-        <div class="demo-card-role">Barbero Senior</div>
-        <div class="demo-card-name">RODRIGO</div>
-        <div class="demo-card-services">
-          <div class="demo-card-service"><span>Corte</span><span>15 €</span></div>
-          <div class="demo-card-service"><span>Corte + Barba</span><span>22 €</span></div>
-          <div class="demo-card-service"><span>Ritual de Barba</span><span>17 €</span></div>
-        </div>
-        <span class="demo-card-cta">Reservar con Rodrigo →</span>
+        <div class="demo-card-role">Clásico</div>
+        <div class="demo-card-name">AFEITADO</div>
+        <span class="demo-card-cta">Pedir cita →</span>
       </div>
     </div>
-    <!-- CUALQUIERA -->
-    <div class="demo-card" onclick="openChat()">
-      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Barbería Barbers Club" width="600" height="800" loading="lazy">
+    <div class="demo-card" onclick="openChatServicio('Fade')">
+      <img src="assets/img/serv-fade.jpg" alt="Corte fade con máquina en barbería" width="600" height="800" loading="lazy">
       <div class="demo-card-overlay">
-        <div class="demo-card-role">Primer disponible</div>
-        <div class="demo-card-name">¿EL MÁS<br>RÁPIDO?</div>
-        <div class="demo-card-services">
-          <div class="demo-card-service"><span>Cualquier servicio</span><span>—</span></div>
-          <div class="demo-card-service"><span>Antes disponible</span><span>—</span></div>
-        </div>
-        <span class="demo-card-cta">Reservar ahora →</span>
+        <div class="demo-card-role">Todos los estilos</div>
+        <div class="demo-card-name">CORTES<br>FADE</div>
+        <span class="demo-card-cta">Pedir cita →</span>
+      </div>
+    </div>
+    <div class="demo-card" onclick="openChatServicio('Corte infantil')">
+      <img src="assets/img/serv-infantil.jpg" alt="Niño en la silla de la barbería" width="600" height="800" loading="lazy">
+      <div class="demo-card-overlay">
+        <div class="demo-card-role">Peques</div>
+        <div class="demo-card-name">CORTES<br>INFANTILES<br>Y BEBÉS</div>
+        <span class="demo-card-cta">Pedir cita →</span>
+      </div>
+    </div>
+    <div class="demo-card" onclick="openChatServicio('Color')">
+      <img src="assets/img/serv-color.jpg" alt="Reflejos con papel de aluminio" width="600" height="800" loading="lazy">
+      <div class="demo-card-overlay">
+        <div class="demo-card-role">Color</div>
+        <div class="demo-card-name">COLOR Y<br>REFLEJOS</div>
+        <span class="demo-card-cta">Pedir cita →</span>
       </div>
     </div>
   </div>
@@ -386,151 +376,115 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
 
 <!-- GALERÍA -->
 <div class="galeria" id="galeria">
-  <div class="galeria-title">NUESTRO<br><span style="font-family:Georgia,serif;font-style:italic;font-weight:400;color:rgba(255,255,255,.4)">trabajo.</span></div>
+  <div class="galeria-title">EN LA<br><span style="font-family:Georgia,serif;font-style:italic;font-weight:400;color:rgba(255,255,255,.4)">barbería.</span></div>
   <div class="galeria-grid">
-    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Corte de pelo barbería" width="400" height="400" loading="lazy"></div>
-    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Barbero profesional" width="400" height="400" loading="lazy"></div>
-    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Afeitado clásico barba" width="400" height="400" loading="lazy"></div>
-    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Corte moderno barbería" width="400" height="400" loading="lazy"></div>
-    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Barbero en acción" width="400" height="400" loading="lazy"></div>
-    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Interior barbería premium" width="400" height="400" loading="lazy"></div>
-    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Ritual de barba" width="400" height="400" loading="lazy"></div>
-    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Arreglo barba profesional" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="assets/img/gal-1.jpg" alt="Corte de pelo en barbería" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="assets/img/gal-2.jpg" alt="Barbero trabajando" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="assets/img/gal-3.jpg" alt="Afeitado clásico" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="assets/img/gal-4.jpg" alt="Corte moderno de caballero" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="assets/img/gal-5.jpg" alt="Barbero perfilando un corte" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="assets/img/gal-6.jpg" alt="Interior de una barbería" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="assets/img/gal-7.jpg" alt="Cuidado de barba" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="assets/img/gal-8.jpg" alt="Arreglo de barba a navaja" width="400" height="400" loading="lazy"></div>
   </div>
 </div>
 
-<!-- SERVICIOS -->
-<section class="servicios" id="servicios">
-  <div class="sec-tag">Lo que hacemos</div>
-  <div class="sec-title">SERVICIOS</div>
+<!-- CARTA DE SERVICIOS -->
+<section class="servicios" id="lista">
+  <div class="sec-tag">Carta de servicios</div>
+  <div class="sec-title">TODOS LOS<br><em>servicios</em></div>
   <div class="servicios-grid">
-    <div class="serv-card">
+    <div class="serv-card" onclick="openChatServicio('Corte caballero')">
       <div class="serv-n">01</div>
-      <div class="serv-name">Corte</div>
-      <div class="serv-time">30 min</div>
-      <div class="serv-price">15€</div>
+      <div class="serv-name">Corte de caballero</div>
+      <span class="demo-card-cta">Pedir cita →</span>
     </div>
-    <div class="serv-card">
+    <div class="serv-card" onclick="openChatServicio('Corte + barba')">
       <div class="serv-n">02</div>
-      <div class="serv-name">Corte + Barba</div>
-      <div class="serv-time">45 min</div>
-      <div class="serv-price">22€</div>
+      <div class="serv-name">Corte y arreglo de barba</div>
+      <span class="demo-card-cta">Pedir cita →</span>
     </div>
-    <div class="serv-card">
+    <div class="serv-card" onclick="openChatServicio('Afeitado')">
       <div class="serv-n">03</div>
-      <div class="serv-name">Ritual de Barba</div>
-      <div class="serv-time">30 min</div>
-      <div class="serv-price">17€</div>
+      <div class="serv-name">Afeitado</div>
+      <span class="demo-card-cta">Pedir cita →</span>
     </div>
-    <div class="serv-card">
+    <div class="serv-card" onclick="openChatServicio('Fade')">
       <div class="serv-n">04</div>
-      <div class="serv-name">Arreglo Barba</div>
-      <div class="serv-time">20 min</div>
-      <div class="serv-price">10€</div>
+      <div class="serv-name">Cortes fade · todos los estilos</div>
+      <span class="demo-card-cta">Pedir cita →</span>
     </div>
-    <div class="serv-card">
+    <div class="serv-card" onclick="openChatServicio('Corte infantil')">
       <div class="serv-n">05</div>
-      <div class="serv-name">Corte + Cejas</div>
-      <div class="serv-time">30 min</div>
-      <div class="serv-price">17€</div>
+      <div class="serv-name">Cortes infantiles y bebés</div>
+      <span class="demo-card-cta">Pedir cita →</span>
     </div>
-    <div class="serv-card">
+    <div class="serv-card" onclick="openChatServicio('Color')">
       <div class="serv-n">06</div>
-      <div class="serv-name">Corte Jubilado</div>
-      <div class="serv-time">20 min</div>
-      <div class="serv-price">12€</div>
+      <div class="serv-name">Color y reflejos</div>
+      <span class="demo-card-cta">Pedir cita →</span>
     </div>
-    <div class="serv-card">
+    <div class="serv-card" onclick="openChatServicio('Desrizante')">
       <div class="serv-n">07</div>
-      <div class="serv-name">Color Global</div>
-      <div class="serv-time">240 min</div>
-      <div class="serv-price" style="font-size:1.1rem;margin-top:6px">A consultar</div>
+      <div class="serv-name">Desrizante</div>
+      <span class="demo-card-cta">Pedir cita →</span>
     </div>
-    <div class="serv-card">
+    <div class="serv-card" onclick="openChatServicio('Otra consulta')">
       <div class="serv-n">08</div>
-      <div class="serv-name">Mechas</div>
-      <div class="serv-time">180 min</div>
-      <div class="serv-price" style="font-size:1.1rem;margin-top:6px">A consultar</div>
+      <div class="serv-name">¿Otra consulta?</div>
+      <span class="demo-card-cta">Escríbenos →</span>
     </div>
   </div>
 </section>
 
-<!-- HORARIOS -->
-<section class="horarios" id="horarios">
-  <div class="sec-tag">Cuándo encontrarnos</div>
-  <div class="sec-title">HORARIOS</div>
+<!-- NOSOTROS / CONTACTO -->
+<section class="horarios" id="nosotros">
+  <div class="sec-tag">Quiénes somos</div>
+  <div class="sec-title">SOBRE<br><em>nosotros</em></div>
   <div class="horarios-inner">
     <div class="hor-table">
-      <div class="hor-row"><span class="hor-dia">Lunes</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
-      <div class="hor-row"><span class="hor-dia">Martes</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
-      <div class="hor-row"><span class="hor-dia">Miércoles</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
-      <div class="hor-row"><span class="hor-dia">Jueves</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
-      <div class="hor-row"><span class="hor-dia">Viernes</span><span class="hor-hora">10:00–14:00 · 15:00–21:00</span></div>
-      <div class="hor-row"><span class="hor-dia">Sábado</span><span class="hor-hora">10:00–15:00</span></div>
-      <div class="hor-row"><span class="hor-dia">Domingo</span><span class="hor-hora">10:00–15:00</span></div>
+      <div class="hor-row"><span class="hor-dia">Dirección</span><span class="hor-hora">Calle Iglesia, 3 · Local 2</span></div>
+      <div class="hor-row"><span class="hor-dia">Localidad</span><span class="hor-hora">28220 Majadahonda, Madrid</span></div>
+      <div class="hor-row"><span class="hor-dia">Teléfono</span><span class="hor-hora"><a href="tel:+34912543968">912 543 968</a></span></div>
+      <div class="hor-row"><span class="hor-dia">Móvil</span><span class="hor-hora"><a href="tel:+34687813295">687 813 295</a></span></div>
+      <div class="hor-row"><span class="hor-dia">Email</span><span class="hor-hora"><a href="mailto:Cobacho1977@gmail.com">Cobacho1977@gmail.com</a></span></div>
+      <div class="hor-row"><span class="hor-dia">Instagram</span><span class="hor-hora"><a href="https://instagram.com/rodrigo.peluqueros" target="_blank" rel="noopener">@rodrigo.peluqueros</a></span></div>
     </div>
     <div class="hor-info">
       <div class="hor-card">
-        <div class="hor-card-title">Reserva online 24/7</div>
-        <div class="hor-card-text">Elige barbero, servicio y horario en menos de 2 minutos. Sin llamadas, sin esperas.</div>
+        <div class="hor-card-title">Estilistas con larga trayectoria</div>
+        <div class="hor-card-text">Te asesoramos el look que más te favorece según tus rasgos y preferencias.</div>
       </div>
       <div class="hor-card">
-        <div class="hor-card-title">Thiago, Kimbo y Rodrigo</div>
-        <div class="hor-card-text">Cada barbero gestiona su propia agenda. Reserva directamente con el que prefieras o con el primero disponible.</div>
+        <div class="hor-card-title">Pide cita sin llamar</div>
+        <div class="hor-card-text">Dinos qué servicio quieres y cuándo te viene bien. Te llamamos para confirmarlo.</div>
       </div>
       <div class="hor-card">
-        <div class="hor-card-title">Color y mechas</div>
-        <div class="hor-card-text">Para servicios de color consulta disponibilidad en el chat. Los tiempos varían según el tratamiento.</div>
+        <div class="hor-card-title">Horario</div>
+        <div class="hor-card-text">Consúltanos horario por el chat o llamando al 912 543 968.</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESEÑAS -->
-<section class="resenas" id="resenas">
-  <div class="sec-tag">Lo que dicen nuestros clientes</div>
-  <div class="sec-title">RESEÑAS<br><span style="font-family:Georgia,serif;font-style:italic;font-weight:400;color:rgba(255,255,255,.4)">reales.</span></div>
-  <div class="resenas-stars">★★★★★ <span>22 reseñas · 5.0 de 5</span></div>
-  <div class="resenas-track-wrap">
-    <div class="resenas-track" id="resenasTrack">
-      <div class="res-card"><div class="res-head"><div class="res-name">Gonzalo</div><div class="res-date">2 jul 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Sitio nuevo y de calidad muy buen corte para repetir</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Aitor</div><div class="res-date">1 jul 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Todo perfecto, los peluqueros los mejores y muy rápidos</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Kevin</div><div class="res-date">30 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">100% recomendable Thiago es un profesional de 10 y siempre es muy atento</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">David</div><div class="res-date">29 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Muy buen trato y como siempre trabajazo Thiago el mejor</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Marco</div><div class="res-date">27 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Thiago es un magnífico profesional. Su trabajo es impecable, cuida cada detalle y el resultado siempre es de diez. ¡Totalmente recomendable!</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">David</div><div class="res-date">26 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Muy buena atención. Corte de pelo fenomenal.</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Mariana</div><div class="res-date">23 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Thiago siempre deja a mi hijo muy contento. Gracias!!</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Ricardo</div><div class="res-date">17 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Thiago kimbo excelente, todo muy chulo el trato estupendo como siempre.</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Arturo</div><div class="res-date">16 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">El local y los productos usados están bien cuidados, el chico es muy majo y el corte muy detallado, hecho con cuidado y bien.</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Cesar</div><div class="res-date">13 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Kimbo de 10. Y local muy cuidado</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Juan Manuel</div><div class="res-date">11 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Precioso el corte de mi hijo.</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">David</div><div class="res-date">5 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte + Barba · Kimbo</div><div class="res-text">Corte + barba por Kimbo, excelente trato, muy amable y el corte perfecto tal cual lo pedí</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Jonatan</div><div class="res-date">4 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte + Barba · Thiago</div><div class="res-text">Local nuevo y amplio. Corte de pelo y arreglo de barba con mucho detalle. Lo recomiendo 100%</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">David</div><div class="res-date">3 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Fenomenal. Trato excepcional. Sabe cuidar al cliente.</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Kevin</div><div class="res-date">3 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">De 10 como siempre 100% recomendable</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Jose Luis</div><div class="res-date">2 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Espectacular lo amables y profesionales que son, te ofrecen bebida al entrar, respecto al corte de pelo lo clavan como tú se lo explicas. Volveremos</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Daniel</div><div class="res-date">2 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte + Barba · Thiago</div><div class="res-text">Todo perfecto como siempre</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Rolando</div><div class="res-date">1 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">de 10! sois increibles</div></div>
-      <!-- Duplicados para loop infinito -->
-      <div class="res-card"><div class="res-head"><div class="res-name">Gonzalo</div><div class="res-date">2 jul 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Sitio nuevo y de calidad muy buen corte para repetir</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Aitor</div><div class="res-date">1 jul 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Todo perfecto, los peluqueros los mejores y muy rápidos</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Marco</div><div class="res-date">27 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Thiago</div><div class="res-text">Thiago es un magnífico profesional. Su trabajo es impecable, cuida cada detalle y el resultado siempre es de diez.</div></div>
-      <div class="res-card"><div class="res-head"><div class="res-name">Cesar</div><div class="res-date">13 jun 2026</div></div><div class="res-stars">★★★★★</div><div class="res-serv">Corte · Kimbo</div><div class="res-text">Kimbo de 10. Y local muy cuidado</div></div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer id="contacto">
   <div class="ft-logo">
-    <span class="italic">barbers</span><span class="sans"> club</span>
+    <span class="italic">rodrigo</span><span class="sans"> peluqueros</span>
   </div>
-  <p>© 2026 Barbers Club · Todos los derechos reservados</p>
-  <a href="https://whitemoon.es">Demo by WhiteMoon Agencia IA</a>
+  <p>
+    Calle Iglesia, 3 · Local 2 · 28220 Majadahonda, Madrid<br>
+    <a href="tel:+34912543968">912 543 968</a> ·
+    <a href="tel:+34687813295">687 813 295</a> ·
+    <a href="mailto:Cobacho1977@gmail.com">Cobacho1977@gmail.com</a> ·
+    <a href="https://instagram.com/rodrigo.peluqueros" target="_blank" rel="noopener">@rodrigo.peluqueros</a><br>
+    © 2026 Rodrigo Peluqueros
+  </p>
+  <a href="https://whitemoon.es" target="_blank" rel="noopener">Demo by WhiteMoon Agencia IA</a>
 </footer>
 
 <!-- FAB -->
-<button class="fab" onclick="openChat()" aria-label="Reservar cita">
+<button class="fab" onclick="openChat()" aria-label="Pedir cita">
   <div class="fab-badge">1</div>
   <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2">
     <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
@@ -541,10 +495,10 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
 <div class="cb-modal" id="cbModal">
   <div class="cb-head">
     <div class="cb-head-l">
-      <div class="cb-av">BC</div>
+      <div class="cb-av">RP</div>
       <div>
-        <div class="cb-name">Barbers Club</div>
-        <div class="cb-status">Disponible ahora</div>
+        <div class="cb-name">Marco</div>
+        <div class="cb-status">Recepción · Rodrigo Peluqueros</div>
       </div>
     </div>
     <button class="cb-x" onclick="closeChat()">×</button>
@@ -572,9 +526,9 @@ function toggleMenu(){
   document.getElementById('navMob').classList.toggle('open');
 }
 
-// HERO WORDS
+// PALABRA ROTATORIA (badge del hero)
 (function(){
-  var words=['DEFINE.','DISTINGUE.','IDENTIFICA.','ELEVA.'];
+  var words=['Corte','Barba','Fade','Afeitado'];
   var el=document.getElementById('heroWord');
   if(!el)return;
   var i=0;
@@ -594,41 +548,44 @@ function toggleMenu(){
   },2800);
 })();
 
-// CHAT STATE
-var CS={step:0,barbero:'',servicio:'',dia:'',hora:'',nombre:'',telefono:''};
+// ── CHAT: configuración del negocio ────────────────────────────────
+var CFG={
+  NEGOCIO:'Rodrigo Peluqueros',
+  ASISTENTE:'Marco',
+  ORIGEN:'rodrigo-demo',
+  SECTOR:'Barbería',
+  SUPABASE_URL:'https://mlaqtniujnvfxcvcourm.supabase.co'
+};
+// La Edge Function persiste el lead en leads_web con service role y avisa por
+// Telegram. Por eso el cliente NO necesita clave de Supabase ni hace su propio
+// insert: duplicaría la fila.
+var NOTIFY_FN=CFG.SUPABASE_URL+'/functions/v1/barberias-notify';
 
-var SVCS=[
-  {n:'Corte',t:'30 min',p:'15€'},
-  {n:'Corte + Barba',t:'45 min',p:'22€'},
-  {n:'Ritual de Barba',t:'30 min',p:'17€'},
-  {n:'Arreglo de Barba',t:'20 min',p:'10€'},
-  {n:'Corte + Cejas',t:'30 min',p:'17€'},
-  {n:'Corte Jubilado',t:'20 min',p:'12€'},
-  {n:'Color Global',t:'240 min',p:'A consultar'},
-  {n:'Mechas',t:'180 min',p:'A consultar'}
-];
-var DIAS=['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
-var HORAS_LAB=['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30'];
-var HORAS_FIN=['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30'];
+// Servicios REALES de Rodrigo Peluqueros. Su web no publica precios: no se
+// muestra ninguno ni se inventa.
+var SVCS=['Corte caballero','Corte + barba','Afeitado','Fade','Corte infantil','Color','Otra consulta'];
 
-function openChat(){
-  CS={step:0,barbero:'',servicio:'',dia:'',hora:'',nombre:'',telefono:''};
+var CS={step:0,servicio:'',cuando:'',nombre:'',telefono:''};
+
+function resetChat(){
+  CS={step:0,servicio:'',cuando:'',nombre:'',telefono:''};
   document.getElementById('cbModal').classList.add('open');
   document.getElementById('cbMsgs').innerHTML='';
   document.getElementById('cbOpts').innerHTML='';
   document.getElementById('cbInpWrap').style.display='none';
+}
+
+function openChat(){
+  resetChat();
   setTimeout(startChat,200);
 }
 
-function openChatBarbero(b){
-  CS={step:1,barbero:b,servicio:'',dia:'',hora:'',nombre:'',telefono:''};
-  document.getElementById('cbModal').classList.add('open');
-  document.getElementById('cbMsgs').innerHTML='';
-  document.getElementById('cbOpts').innerHTML='';
-  document.getElementById('cbInpWrap').style.display='none';
+function openChatServicio(s){
+  resetChat();
+  CS.servicio=s;CS.step=1;
   setTimeout(function(){
-    addMsg('bot','Hola! Voy a ayudarte a reservar con '+b+'. ¿Qué servicio necesitas?');
-    showOpts(SVCS.map(function(s){return s.n+' — '+s.p;}));
+    addMsg('bot','Hola, soy '+CFG.ASISTENTE+', de '+CFG.NEGOCIO+'. Te apunto para «'+s+'». ¿Qué día y a qué hora te vendría bien?');
+    showInput('Ej: viernes por la tarde');
   },200);
 }
 
@@ -637,8 +594,8 @@ function closeChat(){
 }
 
 function startChat(){
-  addMsg('bot','Hola! Bienvenido a Barbers Club. ¿Con quién quieres reservar?');
-  showOpts(['Thiago','Kimbo','Rodrigo','El primero disponible']);
+  addMsg('bot','Hola, soy '+CFG.ASISTENTE+', de '+CFG.NEGOCIO+'. ¿Qué servicio necesitas?');
+  showOpts(SVCS);
 }
 
 function addMsg(type,text){
@@ -698,49 +655,71 @@ function handleInput(val){
 
 function processStep(val){
   if(CS.step===0){
-    CS.barbero=(val==='El primero disponible'?'cualquier barbero':val);
+    CS.servicio=val;
     CS.step=1;
-    addMsg('bot','Perfecto. ¿Qué servicio necesitas?');
-    showOpts(SVCS.map(function(s){return s.n+' — '+s.p;}));
+    addMsg('bot','Perfecto. ¿Qué día y a qué hora te vendría bien?');
+    showInput('Ej: viernes por la tarde');
   } else if(CS.step===1){
-    CS.servicio=val.split(' — ')[0];
+    CS.cuando=val;
     CS.step=2;
-    addMsg('bot','¿Qué día prefieres?');
-    showOpts(DIAS);
-  } else if(CS.step===2){
-    CS.dia=val;
-    CS.step=3;
-    var horas=(CS.dia==='Sábado'||CS.dia==='Domingo')?HORAS_FIN:HORAS_LAB;
-    addMsg('bot','¿A qué hora?');
-    showOpts(horas);
-  } else if(CS.step===3){
-    CS.hora=val;
-    CS.step=4;
     addMsg('bot','¿Cuál es tu nombre?');
     showInput('Tu nombre...');
-  } else if(CS.step===4){
+  } else if(CS.step===2){
     CS.nombre=val;
-    CS.step=5;
-    addMsg('bot','Y tu teléfono para confirmar la cita.');
+    CS.step=3;
+    addMsg('bot','¿Y un teléfono para llamarte y confirmar?');
     showInput('Tu teléfono...');
-  } else if(CS.step===5){
+  } else if(CS.step===3){
     CS.telefono=val;
-    CS.step=6;
+    CS.step=4;
     enviarLead();
   }
 }
 
-function enviarLead(){
-  addMsg('bot','Tu cita: '+CS.barbero+' · '+CS.servicio+' · '+CS.dia+' a las '+CS.hora+'.');
-  showTyping();
-  fetch('https://mlaqtniujnvfxcvcourm.supabase.co/functions/v1/barberias-notify',{
+// ── Envío endurecido ───────────────────────────────────────────────
+// sendBeacon con text/plain evita el preflight CORS y sobrevive al cierre de la
+// pestaña. Si no está disponible o lo rechaza, cae a fetch con reintentos.
+function postLead(payload){
+  var body=JSON.stringify(payload);
+  try{
+    if(navigator.sendBeacon){
+      var blob=new Blob([body],{type:'text/plain;charset=UTF-8'});
+      if(navigator.sendBeacon(NOTIFY_FN,blob))return 'beacon';
+    }
+  }catch(e){}
+  fetchConReintento(body,0);
+  return 'fetch';
+}
+
+function fetchConReintento(body,intento){
+  fetch(NOTIFY_FN,{
     method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({nombre:CS.nombre,telefono:CS.telefono,barbero:CS.barbero,servicio:CS.servicio,dia:CS.dia,hora:CS.hora})
-  }).catch(function(){});
+    headers:{'Content-Type':'text/plain;charset=UTF-8'},
+    body:body,
+    keepalive:true
+  }).then(function(r){
+    if(!r.ok&&intento<2)setTimeout(function(){fetchConReintento(body,intento+1);},800*(intento+1));
+  }).catch(function(){
+    if(intento<2)setTimeout(function(){fetchConReintento(body,intento+1);},800*(intento+1));
+  });
+}
+
+function enviarLead(){
+  showTyping();
+  postLead({
+    nombre:CS.nombre,
+    telefono:CS.telefono,
+    servicio:CS.servicio,
+    dia:CS.cuando,
+    hora:'',
+    barbero:'',
+    negocio:CFG.NEGOCIO,
+    origen:CFG.ORIGEN,
+    sector:CFG.SECTOR
+  });
   setTimeout(function(){
     removeTyping();
-    addMsg('bot','¡Reserva recibida! Te llamamos al '+CS.telefono+' para confirmar. Nos vemos el '+CS.dia+' a las '+CS.hora+'. Barbers Club.');
+    addMsg('bot','Listo, '+CS.nombre+'. Ya tenemos tus datos y te llamamos para confirmar tu cita en '+CFG.NEGOCIO+'. ¡Gracias!');
     document.getElementById('cbOpts').innerHTML='';
     document.getElementById('cbInpWrap').style.display='none';
   },900);

@@ -8,7 +8,11 @@ import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 // sitio, así que si el aviso se perdía (o nadie lo leía) no quedaba rastro.
 // Ahora también inserta en leads_web con service role, igual que vet-notify.
 //
-// Recibe (POST JSON): { nombre, telefono, barbero, servicio, dia, hora, test? }
+// Recibe (POST JSON): { nombre, telefono, barbero, servicio, dia, hora, test?,
+//                        origen?, sector?, negocio? }
+// origen/sector/negocio permiten reutilizar la función desde varias demos
+// (p. ej. "rodrigo-demo"); si no llegan se usan los de la demo original.
+// El cuerpo puede venir como text/plain (sendBeacon): req.json() lo parsea igual.
 //
 // Secrets usados (nunca en cliente):
 //   - TELEGRAM_BOT_TOKEN        : token del bot de Telegram
@@ -64,6 +68,12 @@ Deno.serve(async (req: Request) => {
   const hora = String(data.hora ?? "").trim();
   const soloPrueba = data.test === true;
 
+  // Cada demo montada sobre esta función identifica su propio origen/sector.
+  // Si no los manda, se conservan los valores de la demo original.
+  const origen = String(data.origen ?? "").trim() || "barberias-demo";
+  const sector = String(data.sector ?? "").trim() || "barberia";
+  const negocio = String(data.negocio ?? "").trim() || "Barbería";
+
   const digits = telefono.replace(/\D/g, "");
 
   // 1) Lead en leads_web (service role → no requiere clave en el cliente)
@@ -89,10 +99,10 @@ Deno.serve(async (req: Request) => {
         body: JSON.stringify({
           nombre: nombre || null,
           telefono: telefono || null,
-          sector: "barberia",
+          sector,
           interes: servicio || "cita",
           mensaje: mensaje || null,
-          origen: "barberias-demo",
+          origen,
           cita_dia: dia || null,
           cita_hora: hora || null,
           fecha: new Date().toISOString(),
@@ -112,8 +122,8 @@ Deno.serve(async (req: Request) => {
   // 2) Aviso por Telegram
   const msg =
     (soloPrueba
-      ? "🧪 PRUEBA — demo WhiteMoon · Barbería\n\n"
-      : "✂️ NUEVA CITA — demo WhiteMoon · Barbería\n\n") +
+      ? `🧪 PRUEBA — demo WhiteMoon · ${negocio}\n\n`
+      : `✂️ NUEVA CITA — demo WhiteMoon · ${negocio}\n\n`) +
     `👤 ${nombre || "-"}\n` +
     `📱 ${telefono || "-"}\n` +
     (barbero ? `💈 Barbero: ${barbero}\n` : "") +
