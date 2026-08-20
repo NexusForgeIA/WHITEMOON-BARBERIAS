@@ -12,6 +12,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/img/hero-barberia.jpg" imagesrcset="assets/img/hero-barberia-900.jpg 900w, assets/img/hero-barberia.jpg 1600w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -51,10 +52,10 @@ body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);o
 
 /* HERO */
 .hero{height:100dvh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:100px 48px 72px;overflow:hidden}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.6) 60%,rgba(0,0,0,.92) 100%)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;opacity:.85}
+.hero-overlay{position:absolute;inset:0;background:radial-gradient(120% 90% at 12% 62%,rgba(0,0,0,.95) 0%,rgba(0,0,0,.85) 45%,rgba(0,0,0,.25) 78%,rgba(0,0,0,0) 100%),linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.3) 55%,rgba(0,0,0,.85) 100%)}
 
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid var(--border);padding:7px 14px;border-radius:2px;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:24px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid var(--border);padding:7px 14px;border-radius:2px;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:24px;position:relative;z-index:2}
 .badge-dot{width:6px;height:6px;background:var(--white);border-radius:50%;animation:badgePulse 2s ease-in-out infinite}
 @keyframes badgePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
 
@@ -213,6 +214,9 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
   .nav-mob.open{display:flex}
   .nav-mob a{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--border2)}
   .hero{padding:60px 20px 60px}
+  /* en pantallas estrechas el degradado radial no cubre el texto: scrim vertical más denso */
+  .hero-overlay{background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.68) 52%,rgba(0,0,0,.92) 100%)}
+  .hero-img{object-position:center 50%}
   section,.demo-strip,.galeria{padding-left:20px;padding-right:20px}
   .demo-grid{grid-template-columns:1fr}
   .galeria-grid{grid-template-columns:repeat(2,1fr)}
@@ -263,10 +267,10 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <video class="hero-video" autoplay muted loop playsinline preload="none"
-    poster="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpg&q=60&w=1200&auto=format&fit=crop">
-    <source src="assets/video/hero-barber.mp4" type="video/mp4">
-  </video>
+  <img class="hero-img" src="assets/img/hero-barberia.jpg"
+    srcset="assets/img/hero-barberia-900.jpg 900w, assets/img/hero-barberia.jpg 1600w"
+    sizes="100vw" width="1600" height="1063" fetchpriority="high" decoding="async"
+    alt="Interior de la barbería: tres sillones de barbero clásicos frente al espejo, con lámparas cálidas y pared de ladrillo visto">
   <div class="hero-overlay"></div>
 
   <div class="hero-badge">
@@ -390,7 +394,7 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.65rem}
   <div class="galeria-grid">
     <div class="galeria-img"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Corte de pelo barbería" width="400" height="400" loading="lazy"></div>
     <div class="galeria-img"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Barbero profesional" width="400" height="400" loading="lazy"></div>
-    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Afeitado clásico barba" width="400" height="400" loading="lazy"></div>
+    <div class="galeria-img"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Sillón de barbero vintage" width="400" height="400" loading="lazy"></div>
     <div class="galeria-img"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Corte moderno barbería" width="400" height="400" loading="lazy"></div>
     <div class="galeria-img"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Barbero en acción" width="400" height="400" loading="lazy"></div>
     <div class="galeria-img"><img src="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?fm=jpg&q=75&w=400&auto=format&fit=crop" alt="Interior barbería premium" width="400" height="400" loading="lazy"></div>
